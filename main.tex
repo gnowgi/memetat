@@ -1,0 +1,222 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[top=0.85in,left=2.75in,footskip=0.75in,marginparwidth=2in]{geometry}
+
+% use Unicode characters - try changing the option if you run into troubles with special characters (e.g. umlauts)
+\usepackage[utf8]{inputenc}
+\usepackage{comment}
+% clean citations
+\usepackage{cite}
+
+% hyperref makes references clicky. use \url{www.example.com} or \href{www.example.com}{description} to add a clicky url
+\usepackage{nameref,hyperref}
+
+% line numbers
+% \usepackage[right]{lineno}
+
+% improves typesetting in LaTeX
+\usepackage{microtype}
+\DisableLigatures[f]{encoding = *, family = * }
+
+% text layout - change as needed
+\raggedright
+\setlength{\parindent}{0.5cm}
+\textwidth 5.25in 
+\textheight 8.75in
+
+% Remove % for double line spacing
+%\usepackage{setspace} 
+%\doublespacing
+
+% use adjustwidth environment to exceed text width (see examples in text)
+\usepackage{changepage}
+
+% adjust caption style
+\usepackage[aboveskip=1pt,labelfont=bf,labelsep=period,singlelinecheck=off]{caption}
+
+% remove brackets from references
+\makeatletter
+\renewcommand{\@biblabel}[1]{\quad#1.}
+\makeatother
+
+% headrule, footrule and page numbers
+\usepackage{lastpage,fancyhdr,graphicx}
+\usepackage{epstopdf}
+\pagestyle{myheadings}
+\pagestyle{fancy}
+\fancyhf{}
+\rfoot{\thepage/\pageref{LastPage}}
+\renewcommand{\footrule}{\hrule height 2pt \vspace{2mm}}
+\fancyheadoffset[L]{2.25in}
+\fancyfootoffset[L]{2.25in}
+
+% use \textcolor{color}{text} for colored text (e.g. highlight to-do areas)
+\usepackage{color}
+
+% define custom colors (this one is for figure captions)
+\definecolor{Gray}{gray}{.25}
+
+% this is required to include graphics
+\usepackage{graphicx}
+
+% use if you want to put caption to the side of the figure - see example in text
+\usepackage{sidecap}
+
+% use for have text wrap around figures
+\usepackage{wrapfig}
+\usepackage[pscoord]{eso-pic}
+\usepackage[fulladjust]{marginnote}
+\reversemarginpar
+
+% document begins here
+\begin{document}
+\vspace*{0.35in}
+
+% title goes here:
+\begin{flushleft}
+{\Large
+\textbf\newline{A Dynamic Architecture of a Cognitive Agent}
+}
+\newline
+% authors go here:
+\\
+G.~Nagarjuna\textsuperscript{1},
+Durga prasad Karnam\textsuperscript{2}
+\\
+\bigskip
+\bf{1} Indian Institute of Science Education and Research, Pune
+\\
+\bf{2} Indian Institute of Technology, Mumbai
+\\
+\bigskip
+* nagarjuna@iiserpune.ac.in
+
+\end{flushleft}
+\noindent \textbf{Long Title:} \textit{A Segmented, Polarized,
+  Bilaterally Symmetrical, Antagonistically Organized Multizonal
+  Coordinated Pairs in the form of a Layered Sensation Modulating
+  Network Implementing Fixed, Haltable and Transactional Action
+  Patterns of Conscious Semiotic Agents Accouncing Subjective
+  Experience and Generative Syntax}
+
+\subsection*{Abstract}
+We present a novel, yet grounded, framework of models that could
+answer the following question: What makes a cognitive agent develop
+conscious, communicative, and computational competencies at room
+temperature? We define the body of such a cogntive agent as a
+sensation-modulating network (SMN) that counters the effects of a
+gravitational field.  The counteraction is possible due to
+antagonistically organized layered network of multiple action zones
+situated in the agent's body, which is topologically tubular,
+polorized, metamerically segmented, and bilaterally symmetrical
+architecture.  The agent's self-initiated action in the form of a
+stimulus constructs a response in the form of a phenomenological
+experience within the SMN.  Such repeatable and reflexively
+modulatable recursive action patterns geneated within each
+action-zone, a dynamical system forming a stochastic groups, whose
+identities become the tokens.  Alternating choreography of multiple
+action-zones creates the possibility for combinatorial explosion of
+tokens. Since the opportunities for actions are determined by the rich
+ecological situation of an agent, the generated tokens are grounded,
+creating the semantic link between the subject and the object
+providing a graspable situation.  The deeper layers of the SMN, in the
+form of fixed-action patterns (FAPs) are not accessible for
+modulation, but provide a cognitive canvas, a backdground, over which
+the dynamic modulatable action patterns are drawn, creating the
+phenomenological world of experience.  Modulatability is determined by
+haltability of outmost layers of the SMN, reinforced by the already
+differentiated affordances of the ecological space.  Other agents\'s
+haltable action patterns (HAPs) are potential tokens for transactions
+becoming transactional-action patterns (TAPs).  Layered architecture
+of the SMN provisions the possibility for unsaturated HAPs (USHAPs),
+where an action pattern is enacted without the object, delinking the
+subject from the external object .  However, USHAPs also generate
+experience because they are still rooted in the SMN.  Delinked
+action-patterns in the form of USHAPs are concepts.  As these are
+delinked from external object, but not from subjective expereience,
+the agent is free to associate and dissociate the tokens at "will",
+enabling simulation.  Since delinked patterns can be recreated as well
+by other zones in the SMN enables plasticity.
+
+These action patterns differentiate the sensations through an
+integrated broadcasting network.  The streaming patterns of
+haltable-action patterns (HAPS), habits, give rise to integrated
+snapshots resulting in a world of punctuated tokens generating
+syntactic representations of the habitat.
+
+\section{Introduction}
+The study of cognition is marked by a fundamental tension between seemingly irreconcilable research programs. On one side, cognitivism, rooted in the information processing paradigm, seeks to explain phenomena like language and reasoning through amodal symbols and computational rules, often located within the brain \cite{chomsky1965aspects, fodor_modularity_1983}. On the other, 4E (embodied, embedded, enactive, and extended) approaches ground cognition in the dynamic, situated actions of an agent's entire body within its environment \cite{varela, noe_action_2004}. While both camps agree on a biological basis for cognition, their foundational assumptions about the nature of the body and its role in mental life have led to decades of disagreement. This paper argues that this impasse stems from an incomplete understanding of the biological architecture that underpins cognition.
+
+We propose that the core challenge for cognitive science is to answer a set of interrelated questions: (1) What structures and dynamics are necessary for phenomenological experience—the so-called "hard problem"—to arise? (2) How does a cognitive agent construct a stable, geometric picture of its internal and external worlds? (3) How can this generated picture be shared meaningfully with other agents? To address these, we depart from neuro-centric models and introduce an alternative framework centered on a specific, yet generalizable, model of a cognitive agent's body plan.
+
+Our central proposal is a dynamic architecture we term the Sensation-Modulating Network (SMN). We model the agent as a layered network of action zones, organized according to fundamental biological principles: segmented, polarized, bilaterally symmetrical, and antagonistically organized. Within this architecture, cognition emerges not from a central controller initiating action, but from the capacity to \textit{halt} and modulate ongoing, rhythmic action patterns. These patterns range from deep, immutable Fixed Action Patterns (FAPs) to consciously accessible Haltable Action Patterns (HAPs), which can be shared and imitated as Transactional Action Patterns (TAPs). It is this capacity for modulation, we argue, that grounds semiotics, enables the creation of symbols, and gives rise to generative syntax.
+
+This paper unfolds in four parts. First, we will elaborate on the proposed SMN model, detailing its architectural principles and a dynamic properties. Second, we will demonstrate how this model can explain a wide range of cognitive phenomena, from subjective experience and perception to the emergence of abstract concepts and language. In this section, we will also reinterpret existing experimental evidence from across the cognitive sciences, showing how it supports our action-based framework. Finally, we will conclude by discussing the broader implications of this model, arguing that it offers a foundational departure from previous approaches and provides a path toward reconciling the long-standing divisions in the field.
+
+\section{The Proposed Model: A Dynamic Architecture}
+At the heart of our proposal is the Sensation-Modulating Network (SMN), a framework for understanding the cognitive agent as a whole, rather than as a brain-centric processing unit. The SMN is not a specific organ but the entire functional architecture of the agent, defined by a set of core biological design principles. These principles, while ubiquitous in biology, have been largely overlooked in their cognitive implications.
+
+\subsection*{Architectural Principles of the SMN}
+We model the agent's body as a topologically tubular structure possessing four key properties:
+\begin{enumerate}
+    \item \textbf{Polarity:} The body has a defined axis, typically from anterior to posterior, which establishes a fundamental directionality for movement and interaction with the environment.
+    \item \textbf{Metameric Segmentation:} The body is composed of repeating segments or action zones (e.g., limbs, digits, vocal apparatus). Each zone is a locus of potential action.
+    \item \textbf{Bilateral Symmetry:} The body is organized symmetrically around a central axis, creating pairs of coordinated structures.
+    \item \textbf{Antagonistic Organization:} Action within and between zones is governed by antagonistic pairs (e.g., flexion and extension). This push-pull dynamic is the fundamental basis of control and modulation.
+\end{enumerate}
+This architectural plan provides the agent with a multitude of "action zones," each a dynamical system capable of generating rhythmic patterns. The core cognitive faculty, we argue, arises from the agent's ability to manage these patterns.
+
+\subsection*{The Primacy of Halting}
+Contra the received view that the nervous system's primary role is to initiate action, we propose its crucial function for cognition is to \textit{alter} and, most importantly, \textit{halt} ongoing action patterns. Movement and rhythmic activity are default states for biological tissue; even a detached cardiac tissue beats rhythmically. The challenge for a complex agent is not to start moving, but to control, pause, and modulate its intrinsic dynamics. This capacity for halting is what provides the freedom to deviate from fixed trajectories, enabling exploration, deliberation, and the generation of phenomenological experience. A pause in an action sequence is not a lack of activity, but a cognitive act itself—one that creates a space for awareness and choice.
+
+\subsection*{A Hierarchy of Action Patterns}
+The SMN's dynamics give rise to a hierarchy of action patterns, distinguished by their degree of modulatability:
+\begin{itemize}
+    \item \textbf{Fixed Action Patterns (FAPs):}
+    These are deep, phylogenetically old, and largely involuntary rhythmic patterns that form the foundation of the agent's being (e.g., heartbeat, respiration, peristalsis). They are not directly accessible to conscious modulation and constitute the stable background or "cognitive canvas" upon which experience is drawn.
+    \item \textbf{Haltable Action Patterns (HAPs):}
+    These are actions that can be consciously initiated, paused, and modulated. They are performed by the outer, more flexible layers of the SMN (e.g., reaching, grasping, vocalizing). The ability to halt a HAP is the basis for creating discrete, repeatable, and therefore tokenizable, units of action.
+    \item \textbf{Transactional Action Patterns (TAPs):}
+    When HAPs are performed in a social context, they become TAPs. These are actions that are either directed at another agent or are imitated, forming the basis of communication, shared practices, and cultural learning. TAPs are the building blocks of intersubjective meaning.
+\end{itemize}
+
+\subsection*{Layered Networks and the Emergence of Concepts}
+The SMN is a layered architecture. The deeper layers, governed by FAPs, function as an \textbf{integrating network (IN)}, providing a stable, multi-dimensional background of bodily awareness. The outer layers, governed by HAPs, act as a \textbf{differentiating and filtering network (DFN)}, carving specific, meaningful patterns out of the continuous flow of experience.
+
+This architecture provides a natural mechanism for grounding symbols and forming concepts. A HAP is initially \textit{saturated} when it is directed at and constrained by a physical object (e.g., the action of grasping a cup). However, the agent can also perform the action pattern without the object being present. This creates an \textbf{unsaturated HAP (USHAP)}—the action is delinked from the external object but still generates a phenomenological experience because it is rooted in the SMN. These USHAPs are the raw material of concepts, simulations, and imagination. They are abstract but remain grounded in the agent's bodily repertoire, thus resolving the classical symbol-grounding problem.
+
+\section{Explaining Cognitive Phenomena and Reinterpreting Evidence}
+% We will demonstrate how the model explains various phenomena and connect it to existing evidence.
+
+\subsection*{From Action Modulation to Phenomenology}
+The SMN model addresses the "hard problem" of consciousness by proposing that subjective experience is the agent's perception of its own modulated actions. The constant, rhythmic hum of the Fixed Action Patterns (FAPs) creates a stable, non-conscious background—a "cognitive canvas." A phenomenological event occurs when a Haltable Action Pattern (HAP) is initiated, modulated, or, most critically, paused. This change against the stable background *is* the experience. The "what it is like" to see red is the specific pattern of oculomotor and neural HAPs enacted to foveate on a red object; the feeling of thirst is the modulation of interoceptive patterns against the homeostatic background. Consciousness is not a substance or a passive "theater" but an active process of self-differentiation through action.
+
+\subsection*{Constructing a Geometric and Semiotic World}
+The agent's world is not a pre-given, objective space that is passively perceived, but a "memetat"—a geometric and semiotic habitat constructed through action. The SMN computes this geometry through the coordination of its multiple action zones. For instance, the distance to an object is not calculated from retinal size alone, but is enacted through a fusion of HAPs: the proprioceptive feel of reaching a hand, the muscular strain of focusing the eyes, and the time delay between a sound and its echo. The world's geometry is mapped onto the agent's own bodily geometry and action capabilities.
+
+Meaning arises as this geometric world becomes populated with signs. An object's affordances are the saturated HAPs it invites. A rock affords throwing, sitting, or striking. These saturated HAPs are the object's initial meaning for the agent. When these actions are tokenized as unsaturated HAPs (USHAPs), they become concepts that can be manipulated internally. When they are shared and imitated as Transactional Action Patterns (TAPs), they become external, public symbols. This provides a direct, embodied route from perception to semiotics, grounding the Peircean triad of object, representamen (the action pattern), and interpretant (the resulting experience or subsequent action) in the dynamics of the SMN.
+
+\subsection*{The Embodied Origins of Generative Syntax}
+A longstanding challenge in cognitive science is to explain the origin of generative syntax. The SMN model posits that syntax is not a unique, brain-based module for language, but is exapted from the inherent combinatorial structure of the body's action zones. The segmented nature of the SMN provides a finite set of action "lexemes" (the HAPs of different zones). The ability to halt and serially chain these actions provides a natural syntax.
+
+A complex goal, like eating a fruit, is achieved by a syntactic sequence of HAPs: `[see fruit] + [reach for fruit] + [grasp fruit] + [bring to mouth]`. Each element is a discrete action pattern, and the pauses between them act as syntactic boundaries, allowing for substitution (e.g., grasp a different fruit) or recursion (e.g., grasp another fruit). This action-syntax is the scaffold upon which spoken language is built. The rules of grammar are not abstract and amodal, but are deeply homologous with the rules of combining bodily actions. This reinterprets Chomsky's "universal grammar" not as an innate linguistic module, but as a reflection of the universal architecture of the vertebrate body plan.
+
+\subsection*{Reconciling Cognitive Divides}
+The SMN framework offers a bridge between cognitivism and enactivism. It is profoundly enactive, as it equates cognition with the modulation of action. However, it does not reject representation; it redefines it. USHAPs are representations: they are internal, stand-ins for external objects, and can be manipulated in simulations. But unlike classical cognitivist symbols, they are never amodal or arbitrarily related to their referents. They are grounded in the very action patterns used to interact with those referents, thus providing a natural solution to the symbol grounding problem.
+
+This also allows for a reinterpretation of dual-process theories. System 1 can be seen as the fast, parallel, and largely unconscious operation of the SMN's FAPs and highly fluent, automatized HAPs. System 2 emerges from the slow, serial, and effortful process of consciously halting, sequencing, and modulating HAPs, particularly in novel situations or during explicit communication via TAPs. Development and expertise represent the process by which effortful System 2 operations (newly learned TAPs) become fluent, embodied System 1 skills (automatized HAPs).
+
+\section{Conclusion}
+% We will discuss the implications of the model and its departure from other schools of thought.
+
+
+\section*{Acknowledgments}
+We thank just about everybody.
+
+
+%This is where your bibliography is generated. Make sure that your .bib file is actually called library.bib
+\bibliography{library}
+
+%This defines the bibliographies style. Search online for a list of available styles.
+\bibliographystyle{abbrv}
+
+\end{document}

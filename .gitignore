@@ -1,0 +1,15 @@
+# LaTeX auxiliary files
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# Build artifacts
+*.pdf
+
+# Temporary files
+*~
+.DS_Store
