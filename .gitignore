@@ -7,8 +7,10 @@
 *.synctex.gz
 *.toc
 
-# Build artifacts
+# Build artifacts (ignore main document PDF but allow graphics)
+main.pdf
 *.pdf
+!graphics/*.pdf
 
 # Temporary files
 *~
