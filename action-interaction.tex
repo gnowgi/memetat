@@ -1,0 +1,91 @@
+\subsection{The Nature of Action: A Thermodynamic Distinction}
+\label{subsec:action_nature}
+
+Before detailing the architecture of the Sensation-Modulating Network (SMN), we must make a foundational ontological distinction between \textit{action} and \textit{interaction}. While all actions are a form of interaction, not all interactions qualify as actions. This difference has often been blurred in cognitive science, but it is central to an enactive model of cognition.
+
+\paragraph{Interaction as Symmetry.}  
+In the physical sciences, \textbf{interaction} refers to conserved processes governed by the symmetrical laws of physics. Two bodies that collide, two charges that repel, or two waves that interfere are all instances of interaction: they unfold according to conservation principles of momentum, charge, and energy. Importantly, no agent needs to initiate these processes; they are lawful consequences of system dynamics. In this sense, interaction is reciprocal and symmetrical: if body A exerts a force on body B, body B exerts an equal and opposite force on body A. To distinguish them we may refer to them as \textit{p-interactions}.
+
+\paragraph{Action as Asymmetry.}  
+By contrast, \textbf{action} is a thermodynamic process in which a far-from-equilibrium system actively breaks symmetry by expending energy to perturb its environment \cite{prigogine2018order}. An organism or agent acts when it recruits metabolic resources to move, signal, or otherwise produce a directed change. Unlike passive interaction, action is not merely the unfolding of conservation laws; it involves initiating, sustaining, and regulating asymmetries. To act is to resist being carried along by the default flow of physical interactions and instead to impose new gradients, forces, or patterns. This asymmetry is precisely what individuates agents as distinct from the surrounding physical world. In this work we will use the term ``action'' to this sense of the term, and further argue that cognitive actions fall in this category.
+
+\paragraph{Agency and Normativity.}  
+Philosophical treatments of action highlight further dimensions of asymmetry. Actions are individuated by their relation to an agent, their embedding in temporal structures, and their susceptibility to normative assessment \cite{barandiaran2009defining}. In acting, the agent can succeed or fail, be correct or incorrect, act responsibly or irresponsibly. Interactions in the physical sense lack this evaluative dimension: we do not describe  or judge the gravitational pull of the Earth on the Moon as mistaken or appropriate. Action thus introduces normativity and intentional orientation into what otherwise remain symmetrical exchanges.
+
+\paragraph{Social Transactions as Actions.}  
+At the level of intersubjective space, social \textbf{interactions} are better understood as coordinated networks of actions. A conversation, a gesture, or a shared task involves each agent producing asymmetrical perturbations that are reciprocally taken up by others. These are not interactions in the purely physical sense but transactions mediated by meaning, normativity, and temporality. Social interaction therefore presupposes action: it is the transactional layering of many local, energy-expending, symmetry-breaking events enacted by individuals. The SMN model treats this layering explicitly, distinguishing between (i) p-interactions: the physical interaction domain where symmetry prevails, and (ii) s-interactions: the agentive/social domain where asymmetries accumulate into transactions.
+
+\paragraph{Cognition as Energy-Dependent Asymmetry Management.}  
+From this perspective, cognition is not the passive registration of physical interactions but the active management of actions. The agent must marshal resources, regulate asymmetries, and coordinate transactions at multiple levels—from muscular contractions to linguistic exchanges. By distinguishing action from interaction, we frame the SMN as a model of how energy-dependent asymmetry at the bodily level scaffolds intersubjective asymmetry at the social level.
+
+% --- put in your preamble if not already there ---
+% \usepackage{tikz}
+% \usetikzlibrary{arrows.meta, positioning, fit, backgrounds}
+
+% --- adjustable width to accommodate custom margins ---
+\newcommand{\layerwidth}{0.8\linewidth} % change to 1.05\linewidth if you want to extend into a left margin
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+  font=\small,
+  >=Latex,
+  box/.style={draw=black, rounded corners=6pt, line width=0.6pt, inner sep=6pt, fill=gray!4, align=left, text width=\layerwidth},
+  title/.style={font=\bfseries},
+  bullet/.style={inner sep=0pt, outer sep=0pt},
+  arrowup/.style={-{Latex[length=3.5mm]}, line width=0.6pt},
+  arrowdown/.style={-{Latex[length=3.5mm]}, line width=0.6pt, dashed},
+]
+
+% --- Layers (bottom to top) ---
+\node[box] (phys) {
+  {\bfseries Physical Interaction}\\[-0.3em]
+  \begin{itemize}[left=1.2em]
+    \item symmetric laws; reciprocity (e.g., $F_{AB}=-F_{BA}$)
+    \item conservation (energy, momentum, charge)
+    \item no agent required; lawful dynamics
+  \end{itemize}
+};
+
+\node[box, above=10mm of phys] (action) {
+  {\bfseries Action (Agentive / Biological)}\\[-0.3em]
+  \begin{itemize}[left=1.2em]
+    \item local symmetry-breaking; imposed gradients
+    \item energy expenditure; far-from-equilibrium
+    \item agency \& normativity (success/failure)
+  \end{itemize}
+};
+
+\node[box, above=10mm of action] (social) {
+  {\bfseries Social Transactions (Intersubjective)}\\[-0.3em]
+  \begin{itemize}[left=1.2em]
+    \item coordination of actions; shared norms \& meanings
+    \item dialog, joint attention, conventions
+    \item evaluable in social/ethical space
+  \end{itemize}
+};
+
+% --- Upward emergence arrows ---
+\draw[arrowup] (phys.north) -- node[right=2pt, align=left] {emerges from /\\ grounded in} (action.south);
+\draw[arrowup] (action.north) -- node[right=2pt, align=left] {emerges from /\\ coordinated by} (social.south);
+
+% --- Downward constraint arrows (dashed) ---
+\draw[arrowdown] (social.south east)++(-8mm,0) -- ++(0,-8mm) node[midway, right=2pt, align=left] {normative\\ constraints};
+\draw[arrowdown] ([xshift=8mm]action.south east) -- ++(0,-8mm) node[midway, right=2pt, align=left] {task/goal\\ constraints};
+
+% --- Braces for inclusion hierarchy (optional, comment out if not needed) ---
+\begin{scope}[on background layer]
+  % faint background boxes to emphasize inclusion (same widths as nodes)
+  \node[fit=(phys), fill=gray!2, draw=gray!40, rounded corners=6pt, inner sep=10pt] {};
+  \node[fit=(action), fill=gray!2, draw=gray!40, rounded corners=6pt, inner sep=10pt] {};
+  \node[fit=(social), fill=gray!2, draw=gray!40, rounded corners=6pt, inner sep=10pt] {};
+\end{scope}
+
+% --- Caption label inside figure (optional) ---
+\node[below=6mm of phys, align=center] (cap) {\emph{Layered ontology:} actions are energy-expending, symmetry-breaking\\
+perturbations enacted by agents; social transactions are coordinated networks of actions.};
+
+\end{tikzpicture}
+\caption{Vertical layered representation distinguishing symmetric \emph{physical interactions}, agentive \emph{actions} (asymmetry, energy use, normativity), and \emph{social transactions} as coordinated networks of actions with intersubjective norms. Upward arrows denote emergence/grounding; dashed downward arrows indicate top-down constraints.}
+\label{fig:action-interaction-layers}
+\end{figure}

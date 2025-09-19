@@ -8,12 +8,13 @@
 \usepackage{natbib}
 \usepackage[colorinlistoftodos, textsize=small]{todonotes} % for \todo{}
 \usepackage{marginnote} % for cleaner margin notes
-\usepackage[capitalize,nameinlink]{cleveref}
 % hyperref makes references clicky. use \url{www.example.com} or \href{www.example.com}{description} to add a clicky url
 \usepackage{nameref,hyperref}
 
-% line numbers
+\usepackage{amsmath}
+% line numbers\usepackage{amsmath}
 % \usepackage[right]{lineno}
+\usepackage[capitalize,nameinlink]{cleveref}
 
 % improves typesetting in LaTeX
 \usepackage{microtype}
@@ -43,6 +44,7 @@
 % headrule, footrule and page numbers
 \usepackage{lastpage,fancyhdr,graphicx}
 \usepackage{epstopdf}
+\usepackage{booktabs}
 \pagestyle{myheadings}
 \pagestyle{fancy}
 \fancyhf{}
@@ -64,6 +66,8 @@
 
 % use if you want to put caption to the side of the figure - see example in text
 \usepackage{sidecap}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, fit, backgrounds}
 
 % use for have text wrap around figures
 \usepackage{wrapfig}
@@ -71,6 +75,14 @@
 \usepackage[fulladjust]{marginnote}
 \reversemarginpar
 
+% Use these macros instead of raw text to simplify later renaming.
+\usepackage{booktabs,tabularx,array,ragged2e}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+
+\newcommand{\FAP}{\textsc{FAP}}
+\newcommand{\HAP}{\textsc{HAP}}
+\newcommand{\OAP}{\textsc{OAP}} % sequence-level, non-necessarily intersubjective
+\newcommand{\TAP}{\textsc{TAP}} % intersubjective, leaves public traces (cultural)
 % document begins here
 \begin{document}
 \vspace*{0.35in}

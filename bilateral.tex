@@ -1,0 +1,56 @@
+
+\subsection{Bilateral Symmetry: Counter-Variation, Comparison, and Error Signals}
+\label{subsec:bilateral}
+
+\marginpar{Two sides: built-in \emph{comparators}.}
+\textbf{Bilateral symmetry} is one of the most pervasive body-plan regularities of the Bilateria.
+For control, having two laterally arranged sensorimotor arrays yields a simple but powerful computation: \emph{counter-variation}.
+By sampling the world in parallel from two neighboring vantage points and actuating with antagonistic pairings, organisms can compute \emph{differences} and \emph{ratios} on the fly---the basis for localization, leveling, and course correction.
+
+\paragraph{Evo--devo foundations.}
+The left--right (L--R) axis is established early and robustly, integrating genetic programs (Nodal/Lefty/Pitx2) with physical mechanisms such as \emph{nodal cilia}-driven flow in vertebrates \cite{Nonaka1998NodalCilia,Hamada2002LRPatterning}.
+Planar polarity pathways align subcellular asymmetries across tissues, coordinating mirror halves; bioelectric networks bias and stabilize axial identities and L--R outcomes \cite{AwLevin2009LRPCP,Levin2014MolecularBioelectricity}.
+These mechanisms yield laterally paired structures whose small asymmetries can be leveraged by control.
+
+\paragraph{Bioelectric implementations.}
+Endogenous voltage gradients and gap-junction networks participate in L--R specification and can reprogram L--R patterning when perturbed, indicating multi-stable, tissue-level attractors \cite{Levin2014MolecularBioelectricity}.
+This supports the SMN's view that comparator architectures and their calibration can be maintained without centralized memory, as distributed physiological states.
+
+\paragraph{Habitat coupling and stereo inference.}
+Bilateral sampling reduces spatial uncertainty by turning 3D estimation into solvable 2-point problems.
+Binocular disparity supports depth estimation and vergence control \cite{CummingDeAngelis2001Stereopsis}; binaural interaural timing and level differences support azimuthal localization \cite{GrothePeckaMcAlpine2010Localization}.
+In gravity, bilateral proprioception enables leveling and balance; in fluids, contra-lateral phase relationships optimize thrust and turning.
+Thus, the physical medium amplifies the value of paired comparisons.
+
+\paragraph{Control advantages for the SMN.}
+Two-sided architectures provide:
+\begin{enumerate}
+  \item \textbf{Error signals by subtraction:} $\Delta s = s_L - s_R$ implements a local gradient estimate usable for immediate course correction without storing past states.
+  \item \textbf{Noise reduction by averaging:} $(s_L+s_R)/2$ attenuates uncorrelated noise while preserving common-mode signals.
+  \item \textbf{Antagonistic actuation:} L--R effectors implement fine steering through small differential activations; interruptibility is achieved by switching differential sign.
+\end{enumerate}
+\marginpar{Finite differences without memory buffers.}
+
+\paragraph{Thermodynamic economy.}
+Because bilateral comparison supplies gradients \emph{now}, the SMN avoids costly internal writes and resets associated with constructing explicit spatial maps.
+Under Landauer's principle, fewer policy overwrites mean less unavoidable heat; stereo sampling trades memory for \emph{simultaneity} and \emph{structure} \cite{Landauer1961Irreversibility,Bennett2003LandauerNotes,StillEtAl2012ThermoPrediction}.
+
+\paragraph{Formalization sketch.}
+Let $s_L(t)$ and $s_R(t)$ denote left/right sensor streams.
+A minimal steering controller uses
+\begin{align}
+e(t) &= s_L(t) - s_R(t), \qquad m(t) = \tfrac{1}{2}\big(s_L(t)+s_R(t)\big), \\
+u_{\text{steer}}(t) &= k_e\, e(t) + k_m\, \dot{m}(t),
+\end{align}
+with $k_e,k_m$ tuned to medium-specific dynamics.
+Stereo control thus implements an \OAP{} by sequencing lateral differences through habitat-shaped transfer functions (gravity for leveling; fluid for turning), with halts encoded as $u_{\text{steer}} \to 0$.
+\todo{Figure: paired sensors/effectors with (i) disparity/ITD geometry, (ii) contra-lateral phase control, (iii) gravity vector for leveling.}
+
+\noindent\emph{Energy note.} Any logically irreversible update incurs
+$\dot Q \;\ge\; k_B T \ln 2 \cdot \dot N_{\text{erase}}$;
+by composing actions from stable carriers/priors (gravity, fluids, tissue attractors), the SMN lowers $\dot N_{\text{erase}}$ and heat.
+
+
+\paragraph{SMN vs Habitat (capsule).}
+\textbf{SMN:} bilateral sensors/effectors compute error-by-subtraction and average-by-addition for immediate steering.
+\textbf{Habitat:} stereo geometry in gravity and fluids turns paired sampling into robust gradient estimates, avoiding explicit spatial maps.

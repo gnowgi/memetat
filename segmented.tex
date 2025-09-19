@@ -1,0 +1,51 @@
+
+\subsection{Segmented Architecture: Modular Controllers and Coordinated Rhythms}
+\label{subsec:segmented}
+
+\marginpar{Segmentation = reusable control modules.}
+Segmentation is a pervasive evo--devo strategy that decomposes the body into \emph{repeating units} capable of semi-autonomous control. 
+For the SMN, segmentation furnishes a library of \emph{modular controllers}---each segment hosting local pattern generators and antagonistic actuators---that can be composed into flexible whole-body behaviors.
+
+\paragraph{Evo--devo foundations.}
+Across bilaterians, repeated structures arise through conserved patterning logics.
+In vertebrates, somitogenesis couples a tissue-scale \emph{wavefront} to local \emph{oscillators}, producing periodic somites \cite{CookeZeeman1976ClockWavefront,Pourquie2003SegmentationClock,Pourquie2011SegmentationClock}.
+In arthropods, diverse mechanisms (simultaneous vs sequential, long-germ vs short-germ) implement segment addition beyond the \emph{Drosophila-only} narrative \cite{PeelChipmanAkam2005ArthropodSegmentation}.
+These blueprints instantiate a general computational theme: \emph{clock + wavefront} turns continuous tissue into discrete, reusable units.
+
+\paragraph{Control: CPGs, coordination, and interruptibility.}
+A central virtue of segmentation is the distribution of \emph{central pattern generators} (CPGs)---local rhythm factories for movement.
+Segmental CPGs can operate independently yet coordinate via inter-segment couplings to form coherent global gaits \cite{MarderBucher2001CPG,Grillner2006Lamprey,Ijspeert2008CPG}.
+Interruptibility comes ``for free'': local halts, phase resets, and re-routing are applied per segment, yielding \emph{HAPs} without destabilizing the global pattern (e.g., obstacle negotiation, gait transitions).
+\marginpar{Global behavior via local phase relationships.}
+
+\paragraph{Bioelectric coupling of segmental control.}
+Although classic accounts emphasize genetic and synaptic mechanisms, bioelectric networks provide complementary, fast \emph{tissue-level} couplings: gap-junction connectivity and resting-potential landscapes can synchronize or bias segmental timing, modulate growth, and stabilize multi-stable states \cite{Levin2014MolecularBioelectricity}.
+In the SMN, these voltage dynamics are an additional layer knitting segmental controllers into a coherent organism.
+
+\paragraph{Habitat coupling: gravity and fluid.}
+Segment chains translate habitat physics into control constraints.
+In gravity, stacked segments distribute load, stabilize posture, and enable local corrective torques; in fluids, serial bending waves exploit boundary-layer and wake interactions for efficient thrust \cite{Alexander2003PrinciplesLocomotion}.
+Thus, segmentation not only reduces computational complexity; it directly \emph{matches} the structure of the medium.
+
+\paragraph{Thermodynamic economy.}
+Modularity lowers the need for costly global policy rewrites: most adjustments are local phase tweaks and gate flips.
+Under Landauer's principle, fewer global resets mean less unavoidable dissipation; segmentation favors \emph{action-pattern reuse} over data storage \cite{Landauer1961Irreversibility,Bennett2003LandauerNotes,StillEtAl2012ThermoPrediction}.
+\marginpar{Economy by local updates, not global rewrites.}
+
+\paragraph{Formalization sketch.}
+Let $x_i(t)$ be the state of the $i$th segmental controller (e.g., a phase oscillator).
+Nearest-neighbor coupling $K_{ij}$ yields traveling waves or standing patterns depending on phase-lag targets.
+In the simplest case, a lattice of phase oscillators (Kuramoto-type) produces smooth waves; \emph{interrupts} are transient detunings or phase resets at select nodes.
+\begin{align}
+\dot{\theta}_i &= \omega_i + \sum_{j \in \mathcal{N}(i)} K_{ij} \sin(\theta_j - \theta_i - \phi_{ij}) + u_i(t),
+\end{align}
+where $u_i(t)$ encodes halts (HAPs) and transactional reconfigurations (TAPs) via temporary changes to $\omega_i$ or $K_{ij}$.
+\marginpar{Kuramoto lattice as a \emph{control surface}.}
+\todo{Figure: (i) segmented chain with CPGs, (ii) phase-lag targets for swimming/walking, (iii) local phase reset producing a step or turn, (iv) habitat arrows (gravity/fluid) shaping feasible lags.}
+
+\paragraph{SMN vs Habitat (capsule).}
+\textbf{SMN:} segmental CPGs coordinate via local phase rules; interrupts stay local and compose into \OAP{}s.
+\textbf{Habitat:} gravity partitions load across segments; fluids reward traveling-wave phase lags—medium structure constrains and simplifies coordination.
+
+\paragraph{Adaptation.}
+Segmental CPGs adapt phase/gain through local plasticity while surrounding tissues update bioelectric set-points, stabilizing desired phase-lag patterns for common gaits and enabling quick local interrupts without global rewrites.

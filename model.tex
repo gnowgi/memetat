@@ -8,23 +8,30 @@ as a brain-centered processor. The SMN addresses central questions of cognitive 
 by specifying how agents construct geometric pictures of their world through 
 \emph{action-based differentiation}. It is not conceived as a single organ but as the 
 functional organization of the agent, defined by a set of core biological design principles. 
-These principles—tubular topology, segmentation, polarity, bilateral symmetry, and antagonistic organization—
+These principles—polarity, tubular topology, segmentation, bilateral symmetry, multi-zonal and antagonistic organization—
 are ubiquitous across animal bodies, yet their implications 
 for cognition have not been fully explored, though they are well recognized within biology.
-\marginpar{Body-plan is dynamically coupled with the habitat and cannot be studied independently  as just anatomy.}
-\todo{We need to expand on each of the principles, with a summary and citations on comparative anatomy and evo-devo review.}
+\marginpar{The body-plan is dynamically coupled with the habitat and cannot be studied independently to describe or explain cognitive phenomena.}
 
 \subsection{From Rhythmic Action to Cognition}
 All living agents generate rhythmic action patterns—oscillatory movements such as beating, 
 swimming, walking, and breathing—that anchor them in time. Cognition, we argue, arises from 
-the \emph{capacity to interrupt and reconfigure} such rhythmic patterns. This interruption 
-creates a hierarchy of action forms: 
+the \emph{capacity to interrupt and reconfigure} such rhythmic patterns, and in that process the organism decodes the space by modulating sensations. This interruption 
+creates a hierarchy of action patterns: 
 \emph{Fixed Action Patterns} (FAPs), \emph{Haltable Action Patterns} (HAPs), and 
 \emph{Transactional Action Patterns} (TAPs). 
-This hierarchy makes possible both stability and flexibility in behavior, uniting 
-automatized responses with adaptive control. 
-\todo{Add references on rhythmic motor control and dynamical systems: Kelso \& Schöner, Buzsáki.}
+This hierarchy makes possible both stability and flexibility in behavior, uniting automatized responses with adaptive control. 
+\todo{Add references on rhythmic motor control and dynamical systems: Kelso \& Schöner, Buzsáki, and Haken-Keslo-Bunz model.}
 \marginpar{Interruptibility as a minimal cognitive act.}
+
+\paragraph{Interruptibility operator.}\label{interrupt-operator}
+Let $\Gamma$ be a \FAP{} limit cycle with phase $\theta(t)$.
+Define the halt operator $\mathcal{H}_{\alpha}$ which, when applied at time $t_0$, transiently perturbs control parameters so that
+\[
+\mathcal{H}_{\alpha}[\Gamma](t_0\!:\!t_0{+}\alpha):\quad \dot\theta(t)\approx 0
+\]
+moving the trajectory to a non-oscillatory set for duration $\alpha$. 
+A \HAP{} is $(\Gamma,\mathcal{H}_\alpha)$; an \OAP{} is a finite sequence $\big(\mathcal{H}_{\alpha_k}\big)$ across modules/zones; a \TAP{} is any \HAP{}/\OAP{} that also writes a public trace readable by other agents.
 
 \subsection{Biological Architecture as Cognitive Grounding}
 \label{subsec:bio-arch}
@@ -37,6 +44,14 @@ bilaterally symmetrical, and antagonistically organized. Each feature contribute
     \item \textbf{Antagonism} builds in the possibility of halting and reversing actions.
 \end{itemize}
 \todo{Cross-reference those subsections here with \texttt{\textbackslash cref}.}
+
+\input{action-interaction}
+\input{polarized}
+\input{tubular}
+\input{segmented}
+\input{bilateral}
+\input{multi-zonal}
+\input{antagonistic}
 
 \subsection{Habitat as Co-Architect: Fluid and Gravity}
 \label{subsec:habitat}
@@ -74,9 +89,6 @@ At the heart of our proposal is the Sensation-Modulating Network (SMN), a framew
 
 This section develops the SMN model in detail, beginning with fundamental distinctions about the nature of action, proceeding through the architectural principles that define the agent's body plan, and culminating in the mathematical formalizations that capture how this architecture gives rise to cognitive phenomena. As we will see, the SMN provides the missing link between biological architecture and cognitive function that has eluded previous approaches.
 
-\subsection{The Nature of Action: A Thermodynamic Distinction}
-\label{subsec:action_nature}
-Before detailing the architecture of the Sensation-Modulating Network (SMN), we must make a foundational ontological distinction between \textit{action} and \textit{interaction}. While all actions are a form of interaction, not all interactions are actions. In the context of this model, an \textbf{interaction} is a conserved process governed by symmetrical physical laws. An \textbf{action}, by contrast, is a local, symmetry-breaking perturbation performed by a far-from-equilibrium system \cite{prigogine2018order}. It is a thermodynamic process: the agent must expend energy to initiate, sustain, and modulate its actions. This distinction is crucial for an enactive model, as it defines the agent as a being that actively creates asymmetries in the world, rather than as a passive object merely being pushed and pulled by external forces. Cognition, in this view, is the process of managing these energy-dependent, symmetry-breaking events.
 
 \subsection{A Principle of Inertia of Cognitive Phenomena}
 \textbf{Action Patterns: }The unit of analysis for cognition is \textit{action patterns}, and not actions \cite{bateson2000steps}.  This requires us to shift our attention from actions \textit{per se} to \textit{change in actions}. Actions are identified or distinguished on the basis of a change in actions or simply action patterns. When we refer to the pattern, we are referring to the pattern of change, a temporal feature of action and not a static structure. 
@@ -426,10 +438,3 @@ Memorisation or learning of HAPs is apparently contradictory in an interesting w
 The biological order maintains a landscape of the SMN, where the topos of the landscape is determined by the body plan (polarised or not, symmetrical or not). The dynamical nature of the FAPs generate the attractors in the landscape. The available articulatory freedom, provided by the multiplicity of the action zones, gives rise to the soundscape, so to speak of the HAPs and TAPs. The soundscape is a transient state, and exists as long as the FAPs, HAPs and TAPs persist, which is the wakeful state. When the action zones are in a restful state, e.g. in a sleep, the soundscape is like a calm surface of a lake. This analogy with the active cognitive state as a soundscape and the biological body as the landscape can be mapped to the layered architecture of the SMN where the interactional space of the SMN forms the landscape, while the action space forms the soundscape.
 
 
-\subsection{Editorial Checklist (to be removed before submission)}
-\begin{itemize}
-    \item Resolve all \todo{} items and promote selected \marginpar{} notes to footnotes if desired.
-    \item Ensure cross-references (\cref{}) point to final section labels.
-    \item Add citations for fluid dynamics, gravity priors, and thermodynamic arguments.
-    \item Remove this checklist and the \texttt{Detailed Elaboration} subsection after merging.
-\end{itemize}

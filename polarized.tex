@@ -1,0 +1,49 @@
+
+\subsection{Polarity as the First Cognitive Coordinate System}
+\label{subsec:polarity}
+
+\marginpar{Polarity furnishes a \emph{coordinate frame} for control.}
+We take \emph{polarity} to mean oriented asymmetries at multiple scales: cellular (apico--basal and planar cell polarity), tissue/organ polarity, and whole-body axes (anterior--posterior, dorsal--ventral, and left--right).
+On the evo--devo path, polarity is among the earliest and most conserved specifications of the body plan, providing the geometric scaffolding upon which segmentation, antagonistic actuation, and bilateral comparison later operate.
+In the SMN, polarity is not merely anatomical: it is the \emph{computational resource} that gives actions a direction for prediction, comparison, and interruption.
+
+\paragraph{Developmental grounding.}
+Classically, polarity is formalized through \emph{positional information}: graded cues and boundary conditions that endow cells with interpretable coordinates \cite{Wolpert1969PositionalInformation}.
+Axial patterning (e.g., anterior--posterior via Hox codes) further refines these coordinates into modular programs \cite{McGinnisKrumlauf1992Hox}.
+Dorsal--ventral polarity is implemented by conserved BMP/Chordin antagonism across bilaterians \cite{DeRobertisSasai1996CommonPlan}, while \emph{planar cell polarity} (PCP) aligns subcellular structures across epithelia to produce coherent tissue-scale orientation \cite{GoodrichStrutt2011PCP}.
+These mechanisms show that polarity is multi-level, redundant, and robust---properties that the SMN exploits for resilient control.
+
+\paragraph{Bioelectric implementations and pattern memory.}
+Endogenous bioelectric networks provide a \emph{physiological encoding} of polarity and target morphology.
+Voltage gradients and gap-junction networks can bias axis specification and organ identity, and---crucially---they support \emph{multi-stable pattern memories} that persist across morphological change \cite{Levin2012MorphogeneticFields,Levin2014MolecularBioelectricity}.
+This non-neural, distributed substrate directly grounds the SMN's claim that control states need not be stored as data in a central location; they can be \emph{maintained as attractors} in tissue-level dynamics.
+
+\paragraph{From polarity to control.}
+For the SMN, polarity anchors three control advantages:
+\begin{enumerate}
+    \item \textbf{Predictive orientation:} An oriented axis makes future sensory flow and mechanical contingencies more predictable along canonical directions (forward/back, dorsal/ventral).
+    \item \textbf{Antagonistic haltability:} Opposed effectors aligned to an axis (flexor/extensor; ad-/abductor) implement \emph{interruptibility} by design; halting is a switch along the same axis.
+    \item \textbf{Comparative inference:} Left--right polarity combined with bilateral symmetry enables \emph{counter-variation} and differencing---the computational basis of comparison and error signals.
+\end{enumerate}
+\marginpar{Interruptibility is \emph{easier} when opposition is built-in.}
+
+\paragraph{Coupling to habitat: gravity and fluid.}
+Polarity is co-constructed with the medium.
+Gravity supplies a constant vector field that organisms internalize via vestibular and proprioceptive systems \cite{AngelakiCullen2008VestibularMultisensory}, turning dorsal--ventral and head--tail distinctions into control priors for posture, balance, and locomotion.
+In aquatic habitats, viscosity and buoyancy make oscillatory control stable and efficient; oriented bodies leverage wake interactions and boundary layers to \emph{predict} flow and economize effort \cite{Vogel1994LifeInMovingFluids,Alexander2003PrinciplesLocomotion}.
+Thus, the habitat directly participates in computation by reducing uncertainty along polarized axes.
+
+\paragraph{Thermodynamic economy.}
+Because polarity supplies reliable directions and comparisons, the SMN can store \emph{action patterns} rather than large internal data structures.
+Under Landauer's bound, logically irreversible updates (policy resets, overwrites) dissipate heat; by coupling to stable axes (gravity) and medium regularities (fluid flow), organisms \emph{lower the frequency of costly resets} while retaining flexible control \cite{Landauer1961Irreversibility,Bennett2003LandauerNotes,StillEtAl2012ThermoPrediction}.
+\marginpar{Action patterns index lawful structure in the world.}
+
+\todo{Figure suggestion: a tri-axial schematic (A--P, D--V, L--R) overlaid with (i) antagonistic pairs, (ii) vestibular gravity vector, (iii) fluid streamlines indicating predictable sensorimotor contingencies. Label links to \cref{subsec:habitat} and \cref{subsec:bio-arch}.}
+
+\paragraph{Cognitive function of polarity (tokens and vectors).}
+Polarity converts undifferentiated space into a usable \emph{code}: oriented axes act as \emph{vectors} for prediction and control, while antagonistic actuation and gated halts yield discrete \emph{tokens}—countable, sequenceable units of action. In this way, polarity provides the SMN with the minimal representational kit for spatial decoding: vectors to project, tokens to compose. Subsequent sections (tubes, segmentation, bilateral comparison) elaborate how this kit scales into navigable, interruptible programs in complex habitats.
+
+
+\paragraph{SMN vs Habitat (capsule).}
+\textbf{SMN:} polarity orients local controllers and antagonistic pairs, enabling interruptible actions along canonical axes.
+\textbf{Habitat:} gravity provides a constant vector; fluids provide directionally predictable flows—together supplying priors/vectors that the SMN exploits to decode space with minimal internal storage.
