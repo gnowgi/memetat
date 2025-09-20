@@ -19,3 +19,21 @@ In the context of the sensation-modulating network (SMN), antagonism is not mere
   }
   \label{fig:smn-antagonism}
 \end{figure}
+
+\subsubsection{Antagonistic Architecture could Generate Fixed and Haltable Action Patterns}
+Antagonism as an explanatory theme in biology is widely recognized. The role of agonistic and antagonistic muscles in motor coordination is well established. Each action zone may have multiple sets of agonist and antagonist \textit{actors}.  A contraction leading to a pull of agonist alternated by an antagonist's pull may generate a simple open-close pattern, one cycle: one fixed action pattern (FAP). 
+
+This can be modeled as a Petri net \cite{peterson1977petri}, a bipartite graphical representation used widely for modeling processes as changing states are affected by transitions. The two kinds of nodes in the graph are places and transitions. A transition has a prior state represented as an input place value (token) and a post-state as a resulting place value. 
+
+For example, a sense organ as a transducer can be represented as a transition of an analog physical perturbation from the environment (an input) into an action potential within the agent. This transduction is the basic source of input tokens to the agent, forming sensations.
+\begin{figure}[ht] 
+\includegraphics[width=\textwidth]{graphics/PN_Transduction.pdf}
+\caption{\textbf{Transduction:
+}The transducer is represented as a square node, which will fire when a condition of at least one token as input place value is satisfied, giving rise to the resulting place value.
+Places are represented as circles with or without tokens (the values).}
+\label{transduction}
+\end{figure}
+
+However, a pull action from the complement muscle between the cycle can generate a halting action in between.  Thus two actors can regulate each other's action without involving any other controlling agent or actor. A fine-grain halting may lead to greater coordination.  This is one model of implementing a simple haltable-action-pattern (HAP). 
+
+Haltability, coordination of actions, emerges due to dynamic antagonism among the zones. Having established the fundamental principles of action and haltability, we now turn to the specific biological architecture that implements these principles. The SMN model proposes that cognition emerges from a particular body plan that is shared across animal life but has been largely ignored in cognitive science.
