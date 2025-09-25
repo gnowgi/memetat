@@ -26,3 +26,73 @@ neuroscience perspective, fixed action patterns link motor control
 with the emergence of higher cognitive functions like thinking and
 consciousness.
 
+HakenKelsoBunz1985 — Classic dynamical model (HKB) showing how coordination patterns undergo lawful phase transitions with changing control parameters; anchors the idea that interruptibility manipulates stability/phase. Keywords: coordination dynamics, bifurcation, motor control.
+
+Kelso1995 — Book-length synthesis on self-organization in perception/action; establishes order parameters and control parameters for behavior. Keywords: self-organization, phase transitions.
+
+Buzsaki2006 — Canonical reference on neural rhythms as mechanisms for timing/gating/rephasing—exactly what SMN needs for 
+Hα H α . Keywords: oscillations, gating, timing.
+
+ThelenSmith1994 — Developmental demonstration that cognition/action emerge from embodied dynamics; supports your enactive stance. Keywords: development, dynamical systems, embodiment.
+
+Aron2007 — Review of inhibitory control; provides empirical grounding for “safe halts” and rapid rerouting. Keywords: inhibition, stop-signal, frontal control.
+
+BizziCheung2013 — Evidence and arguments for muscle synergies as compositional primitives—your OAP/TAP substrate. Keywords: synergies, primitives, modular control.
+
+Gibson1979 — Affordances as action-relevant invariants; motivates TAP guards as affordance checks. Keywords: affordances, perception–action.
+
+PezzuloCisek2016 — Continuous control over an affordance landscape; close conceptual fit to SMN’s transactional stance. Keywords: feedback control, continuous decisions.
+
+Friston2010FEP — Normative unification (active inference) that can be used to interpret interruptibility as precision/weighting control. Keywords: free energy, active inference.
+
+
+Annotations (summary + keywords)
+
+gibson1979ecological — Classic statement of ecological psychology: perception as direct pickup of invariants via active exploration; foundational for the idea of \emph{attunement}.
+Keywords: ecological psychology, affordances, invariants, attunement, active perception.
+
+oregan2001sensorimotor — Formalizes the sensorimotor contingencies thesis: seeing is a way of acting; mastery of lawful sensorimotor relations constitutes visual experience.
+Keywords: enactivism, sensorimotor contingencies, perception-as-action.
+
+noe2004action — Book-length defense of the enactive/4E view: perceptual presence depends on practical know-how, not inner pictures.
+Keywords: enactive perception, skill, presence, 4E cognition.
+
+chemero2009radical — Integrates ecological psychology and dynamics into a non-representational “radical embodied cognitive science”; emphasizes agent–environment coupling and affordances.
+Keywords: radical embodied cognition, affordances, dynamics, non-representational.
+
+rietveld2014rich — Introduces “rich landscape of affordances” and \emph{skilled intentionality}; central contemporary source on attunement within 4E/ecological frameworks.
+Keywords: affordances, skilled intentionality, attunement, practice.
+
+pfeifer2007body — Morphological computation: how morphology, materials, and passive dynamics simplify control and perception; why “the body shapes the way we think.”
+Keywords: embodied intelligence, morphological computation, robotics, control offloading.
+
+maynardsmith1985developmental — Seminal statement on developmental constraints shaping evolvability and morphological pathways; anchors the evo–devo side of your argument.
+Keywords: developmental constraints, canalization, body plan bias.
+
+west-eberhard2003developmental — Monumental synthesis on developmental plasticity and genetic accommodation; explains how phenotypic differentiation scaffolds evolutionary change.
+Keywords: plasticity, accommodation, phenotypic variation, evo–devo.
+
+wagner1996evolvability — Theoretical account of modularity and genotype–phenotype mapping underlying the evolution of complex adaptations.
+Keywords: evolvability, modularity, G–P map, complexity.
+
+carroll2008evodevo — Review linking gene regulatory changes to large-scale morphological evolution; core reference on how body plans diversify.
+Keywords: evo-devo, developmental genetics, morphological innovation.
+
+clack2012gaining — Authoritative monograph on the fish–tetrapod transition; shows how biomechanics and environment (buoyancy → gravity) drove radical remodeling.
+Keywords: water–land transition, tetrapod origin, locomotion shift.
+
+lighthill1975mathematical — Foundational biofluiddynamics; connects flow physics to swimming and internal flows—vital for “aquatic first geometry.”
+Keywords: biofluiddynamics, swimming, hydrodynamics, scaling.
+
+vogel1996life — Classic, accessible biomechanics of flow; complements Lighthill with organism-level design insights.
+Keywords: biomechanics, flow, drag, ecomorphology.
+
+sherrington1906integrative — Classic synthesis on neural organization of action; antagonistic control and reciprocity as organizing principles for movement.
+Keywords: antagonism, motor control, reciprocity, reflex.
+
+sherrington1905reciprocal — Original paper detailing reciprocal innervation of antagonistic muscles; anchors the “antagonism” pillar of your narrative.
+Keywords: reciprocal innervation, antagonistic pairs, motor inhibition.
+
+angelaki2008vestibular — Review of vestibular sensing as a multimodal, reference-frame–setting system including gravity; ties anatomy to spatial orientation.
+Keywords: vestibular, gravity, reference frames, multisensory integration.
+

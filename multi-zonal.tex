@@ -5,7 +5,7 @@
 \marginpar{Zones = different physics, different priors.}
 Beyond segmentation, animals exhibit \emph{multi-zonal specialization}: regions (neural and non-neural) with distinct morphologies, materials, timescales, and couplings.
 In the SMN, zones constitute \emph{heterogeneous control substrates}---some excitable and fast, others viscoelastic and slow; some tightly gap-junction coupled, others diffusively or mechanically coupled.
-Zonation enables \emph{routing}: \OAP{}s recruit different zones as the situation demands, while \TAP{}s emerge when actions enlist zones that write \emph{public traces} (marks, deposits, shared states).
+Zonation enables \emph{routing}: \NAP{}s flexibly recruit different zones as the situation demands, while \TAP{}s arise only when negotiable patterns leave \emph{public traces} (marks, deposits, shared states) that become accessible to other agents.
 
 \paragraph{Evo--devo foundations: regionalization across taxa.}
 Regional identities arise by conserved patterning programs that parcel the organism into \emph{fields} with distinct control opportunities.
@@ -18,47 +18,38 @@ Outside the CNS, arthropod \emph{tagmosis} (head, thorax, abdomen) illustrates r
 Zones differ in transfer functions and priors: elastic vs rigid, high- vs low-pass, excitable vs passive.
 The SMN exploits these differences by \emph{task matching}: predictive smoothing in viscoelastic zones; precise timing in excitable zones; persistent bias in bioelectricly polarized zones \cite{Levin2014MolecularBioelectricity}.
 Cerebellar microzones and their olivo-cerebellar loops exemplify fine-grained error-driven control layered on top of slower postural zones \cite{AppsHawkes2009CerebellarZones}; basal ganglia–thalamocortical loops instantiate selection/routing among competing controllers \cite{AlexanderDeLongStrick1986ParallelLoops}.
+\NAP{}s provide the negotiable substrate that allows such heterogeneous zones to be flexibly recombined.
 
 \paragraph{Habitat coupling.}
 Zones are differentially exposed to the medium: distal appendage zones interact with boundary layers and wakes; axial postural zones bear gravitational loading; epithelial exchange zones sense and shape flow/chemistry.
-The habitat thus supplies \emph{zone-specific statistics} that the SMN learns to rely on for \OAP{} routing and, when externalized, for \TAP{} formation (e.g., building nests, laying chemical trails).
+The habitat thus supplies \emph{zone-specific statistics} that the SMN learns to rely on for \NAP{} routing.
+When such patterns are externalized into stable environmental modifications, they become \TAP{}s---for example, building nests, laying chemical trails, or leaving marks that other agents can read.
 
 \paragraph{Thermodynamic economy.}
-Specialization reduces internal erasures: rather than rewriting a monolithic controller, the SMN composes \OAP{}s by switching among zones with \emph{pre-tuned priors}, minimizing logically irreversible policy overwrites \cite{Landauer1961Irreversibility,Bennett2003LandauerNotes}.
-Where durable public traces are beneficial, \TAP{}s exploit stable substrates (mud, fiber, pheromonal fields), offloading memory to the habitat.
-
+Specialization reduces internal erasures: rather than rewriting a monolithic controller, the SMN composes \NAP{}s by switching among zones with \emph{pre-tuned priors}, minimizing logically irreversible policy overwrites \cite{Landauer1961Irreversibility,Bennett2003LandauerNotes}.
+Where durable public traces are beneficial, \TAP{}s exploit stable substrates (mud, fiber, pheromonal fields), offloading memory to the habitat and anchoring intersubjective coordination.
 \paragraph{Formalization sketch.}
-Let zones be nodes $Z_k$ in a directed graph with edge weights $W_{ij}$ encoding feasible couplings (mechanical, electrical, chemical).
-An \OAP{} is a path in this graph with control inputs that gate edges (enable/disable) and adjust local gains.
-A \TAP{} is an \OAP{} whose execution writes to an external state $E$ (a shared field or artifact) such that $E_{t+1}\neq E_t$ and is readable by other agents.
-\marginpar{\TAP{} = \OAP{} $+$ public write.}
-\todo{Figure: (i) zone graph with distinct transfer functions, (ii) \OAP{} path, (iii) \TAP{} writing to an external field, e.g., pheromone or constructed niche.}
+Let $x_i(t)$ be the state of the $i$th segmental controller (e.g., a central pattern generator modeled as a phase oscillator).
+Nearest-neighbor coupling $K_{ij}$ yields traveling waves or standing patterns depending on phase-lag targets.
+In the simplest case, a lattice of oscillators (Kuramoto-type) produces smooth waves; \emph{interrupts} are transient detunings or phase resets at select nodes.
+\begin{align}
+\dot{\theta}_i &= \omega_i + \sum_{j \in \mathcal{N}(i)} K_{ij} \sin(\theta_j - \theta_i - \phi_{ij}) + u_i(t),
+\end{align}
+where $u_i(t)$ captures modulatory inputs from the SMN:
+\begin{itemize}
+  \item \textbf{FAPs} are stereotyped oscillatory routines (the baseline $\omega_i$ dynamics).
+  \item \textbf{HAPs} introduce haltability: $u_i(t)$ imposes temporary pauses or resets.
+  \item \textbf{NAPs} implement negotiable coordination: rephasing or reweighting of couplings $K_{ij}$ under perceptual predicates (affordance tests).
+  \item \textbf{TAPs} arise only when such negotiable patterns leave external traces (gesture, vocalization, artifact), becoming available for intersubjective transaction.
+\end{itemize}
+\marginpar{Kuramoto lattice as a \emph{control surface}.}
+\todo{Figure: (i) segmented chain with CPGs, (ii) phase-lag targets for swimming/walking, (iii) local phase reset producing a step or turn, (iv) habitat arrows (gravity/fluid) shaping feasible lags.}
 
 \paragraph{SMN vs Habitat (capsule).}
-\textbf{SMN:} heterogeneous zones with distinct transfer functions enable task routing as \OAP{}s; \TAP{}s arise when actions write public traces.
-\textbf{Habitat:} zone-specific statistics (loads, flows, chemistries) provide priors that reduce costly internal policy rewrites.
-
-
-\begin{table}[t]
-\begin{adjustwidth}{-\notecolumn}{0pt} % borrow the left notes strip
-\centering
-\setlength{\tabcolsep}{6pt}
-\renewcommand{\arraystretch}{1.15}
-\begin{tabularx}{\dimexpr\linewidth+\notecolumn\relax}{l c c Y}
-\toprule
-\textbf{Zone (substrate)} & \textbf{Dominant coupling} & \textbf{Time scale} & \textbf{Prior / role}\\
-\midrule
-Excitable (neural)              & synaptic / gap junction & ms–s             & precise timing, prediction \\
-Viscoelastic (muscle/ECM)       & mechanical              & 10\,ms–10\,s     & damping, posture, smoothing \\
-Epithelial / bioelectric        & voltage / gap junction  & s–hours          & set-points, pattern memory \\
-Fluid interface (cilia/tubes)   & hydrodynamic            & 10\,ms–s         & carriers, token transport \\
-Gravito-postural                & vestibular / proprio    & 10\,ms–s         & leveling, orientation priors \\
-\bottomrule
-\end{tabularx}
-\caption{Zone couplings, time scales, and priors.}
-\label{tab:zones}
-\end{adjustwidth}
-\end{table}
+\textbf{SMN:} segmental CPGs coordinate via local phase rules; interrupts compose into \NAP{}s, which provide the substrate for adaptive negotiation.  
+\textbf{Habitat:} environmental structure (e.g., gravity, buoyancy, fluid drag) shapes feasible phase-lags, constraining and simplifying coordination.  
 
 \paragraph{Adaptation.}
-Zones calibrate their transfer functions (excitability, stiffness, polarization) to environmental statistics; routing policies then favor pre-tuned zones, minimizing policy overwrites, and promoting \TAP{}s when durable public traces (e.g., constructed niches) pay off.
+Segmental CPGs adapt phase and gain through local plasticity while surrounding tissues update bioelectric set-points, stabilizing useful NAPs (e.g., common gaits) and enabling rapid local interrupts without global rewrites.  
+Segmentation thus discretizes control into re-usable modules: \emph{FAPs become haltable, HAPs become negotiable, and NAPs can be externalized as TAPs}.  
+The SMN leverages these synergies to retime and recombine actions with low wiring cost \citep{BizziCheung2013}.

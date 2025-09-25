@@ -13,29 +13,7 @@ are ubiquitous across animal bodies, yet their implications
 for cognition have not been fully explored, though they are well recognized within biology.
 \marginpar{The body-plan is dynamically coupled with the habitat and cannot be studied independently to describe or explain cognitive phenomena.}
 
-All living agents generate rhythmic action patterns—oscillatory movements such as beating, 
-swimming, walking, and breathing—that anchor them in time. Cognition, we argue, arises from 
-the \emph{capacity to interrupt and reconfigure} such rhythmic patterns, and in that process the organism decodes the space by modulating sensations. This interruption 
-creates a hierarchy of action patterns: 
-\emph{Fixed Action Patterns} (FAPs), \emph{Haltable Action Patterns} (HAPs), and 
-\emph{Transactional Action Patterns} (TAPs). 
-This hierarchy makes possible both stability and flexibility in behavior, uniting automatized responses with adaptive control. 
-\todo{Add references on rhythmic motor control and dynamical systems: Kelso \& Schöner, Buzsáki, and Haken-Keslo-Bunz model.}
-\marginpar{Interruptibility as a minimal cognitive act.}
-
-\paragraph{Interruptibility operator.}\label{interrupt-operator}
-Let $\Gamma$ be a \FAP{} limit cycle with phase $\theta(t)$.
-Define the halt operator $\mathcal{H}_{\alpha}$ which, when applied at time $t_0$, transiently perturbs control parameters so that
-\[
-\mathcal{H}_{\alpha}[\Gamma](t_0\!:\!t_0{+}\alpha):\quad \dot\theta(t)\approx 0
-\]
-moving the trajectory to a non-oscillatory set for duration $\alpha$. 
-A \HAP{} is $(\Gamma,\mathcal{H}_\alpha)$; an \OAP{} is a finite sequence $\big(\mathcal{H}_{\alpha_k}\big)$ across modules/zones; a \TAP{} is any \HAP{}/\OAP{} that also writes a public trace readable by other agents.
-
-The SMN is realized through the evolved architecture of the body plan: segmented, polarized, 
-bilaterally symmetrical, and antagonistically organized. We shall first sketch the body plan in the following sections, followed by their cognitive role. 
-
-\input{narrative}
+\input{bodyplan-geometry}
 \input{action-interaction}
 \input{polarized}
 \input{tubular}
@@ -44,9 +22,9 @@ bilaterally symmetrical, and antagonistically organized. We shall first sketch t
 \input{multi-zonal}
 \input{antagonistic}
 \input{smn}
+\input{layered}
 \input{smn-functional}
-
-
+\input{narrative}
 
 
 

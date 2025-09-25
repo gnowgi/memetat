@@ -1,6 +1,9 @@
 
 \subsection{Polarity as the First Cognitive Coordinate System}
 \label{subsec:polarity}
+Movement demands an anatomical asymmetry, even in single celled organisms, though the polarity is not as conspicuous as in cephalization we see among bilaterals.  Before the advent of true bilateral symmetry, concentration of action or sensory organization at an “anterior” end was not well established in protozoa or the earliest multicellular organisms. Instead, most protozoa and early animals either exhibit no clear anterior-posterior axis or only display weak, functionally driven polarization.   Flagellates and ciliates, display a form of polarity related to their mode of movement and feeding. Among early metazoans like sponges and cnidarians generally lack clear anterior-posterior asymmetry. Their bodies are often radially symmetrical, and nerve nets (when present) are diffuse rather than concentrated at a single end.\cite{MANUEL2009polarity} An amoeaba which defies any form of symmetry is known to show some dorso-vental differentiation in the cytoskeleton\cite{Taniguchi2023AmoebaMembrane}.  The hghly conserved Hox genes in bilaterians and Wnt signaling pathway in determining the axis amd symmetry in morphogenesis of animals\cite{DiMaio2015WntSymmetry} indicates a deeper `toolbox' to tackle spacial coordiante system for navigation.  The timing of Wnt and Hox gene expression during embryogenesis shows a distinct yet interrelated sequence where Wnt signaling generally precedes and initiates Hox gene activation.  
+
+It may appear extremely distant connection between biology and cognition, but the differentiation of the body axis into anterior and posterior, specilization of cephalization would play an important role in the \SMND, specifically in the archestration of multizonal network of action patterns in our model. 
 
 \marginpar{Polarity furnishes a \emph{coordinate frame} for control.}
 We take \emph{polarity} to mean oriented asymmetries at multiple scales: cellular (apico--basal and planar cell polarity), tissue/organ polarity, and whole-body axes (anterior--posterior, dorsal--ventral, and left--right).
@@ -25,18 +28,18 @@ For the SMN, polarity anchors three control advantages:
     \item \textbf{Antagonistic haltability:} Opposed effectors aligned to an axis (flexor/extensor; ad-/abductor) implement \emph{interruptibility} by design; halting is a switch along the same axis.
     \item \textbf{Comparative inference:} Left--right polarity combined with bilateral symmetry enables \emph{counter-variation} and differencing---the computational basis of comparison and error signals.
 \end{enumerate}
-\marginpar{Interruptibility is \emph{easier} when opposition is built-in.}
+%\marginpar{Interruptibility is \emph{easier} when opposition is built-in.}
 
 \paragraph{Coupling to habitat: gravity and fluid.}
 Polarity is co-constructed with the medium.
 Gravity supplies a constant vector field that organisms internalize via vestibular and proprioceptive systems \cite{AngelakiCullen2008VestibularMultisensory}, turning dorsal--ventral and head--tail distinctions into control priors for posture, balance, and locomotion.
 In aquatic habitats, viscosity and buoyancy make oscillatory control stable and efficient; oriented bodies leverage wake interactions and boundary layers to \emph{predict} flow and economize effort \cite{Vogel1994LifeInMovingFluids,Alexander2003PrinciplesLocomotion}.
-Thus, the habitat directly participates in computation by reducing uncertainty along polarized axes.
+Thus, the habitat directly participates in `computation' by reducing uncertainty along polarized axes.\marginpar{Action patterns index lawful structure in the world.}
 
-\paragraph{Thermodynamic economy.}
-Because polarity supplies reliable directions and comparisons, the SMN can store \emph{action patterns} rather than large internal data structures.
-Under Landauer's bound, logically irreversible updates (policy resets, overwrites) dissipate heat; by coupling to stable axes (gravity) and medium regularities (fluid flow), organisms \emph{lower the frequency of costly resets} while retaining flexible control \cite{Landauer1961Irreversibility,Bennett2003LandauerNotes,StillEtAl2012ThermoPrediction}.
-\marginpar{Action patterns index lawful structure in the world.}
+
+%\paragraph{Thermodynamic economy.}
+%Because polarity supplies reliable directions and comparisons, the SMN can store \emph{action patterns} rather than data.
+%Under Landauer's bound, logically irreversible updates (policy resets, overwrites) dissipate heat; by coupling to stable axes (gravity) and medium regularities (fluid flow), organisms \emph{lower the frequency of costly resets} while retaining flexible control \cite{Landauer1961Irreversibility,Bennett2003LandauerNotes,StillEtAl2012ThermoPrediction}.
 
 \todo{Figure suggestion: a tri-axial schematic (A--P, D--V, L--R) overlaid with (i) antagonistic pairs, (ii) vestibular gravity vector, (iii) fluid streamlines indicating predictable sensorimotor contingencies. Label links to \cref{subsec:habitat} and \cref{subsec:bio-arch}.}
 
@@ -44,6 +47,171 @@ Under Landauer's bound, logically irreversible updates (policy resets, overwrite
 Polarity converts undifferentiated space into a usable \emph{code}: oriented axes act as \emph{vectors} for prediction and control, while antagonistic actuation and gated halts yield discrete \emph{tokens}—countable, sequenceable units of action. In this way, polarity provides the SMN with the minimal representational kit for spatial decoding: vectors to project, tokens to compose. Subsequent sections (tubes, segmentation, bilateral comparison) elaborate how this kit scales into navigable, interruptible programs in complex habitats.
 
 
-\paragraph{SMN vs Habitat (capsule).}
+\paragraph{SMN vs Habitat}
 \textbf{SMN:} polarity orients local controllers and antagonistic pairs, enabling interruptible actions along canonical axes.
 \textbf{Habitat:} gravity provides a constant vector; fluids provide directionally predictable flows—together supplying priors/vectors that the SMN exploits to decode space with minimal internal storage.
+\todo{redraw them later, for the time being this is a place holder picture. add cross references to figures as they keep floating around in the document.}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[
+  x=1cm,y=1cm, line join=round, line cap=round, thick,
+  >=Latex, % for nicer arrows
+  every node/.style={font=\small}
+]
+
+% Layout parameters
+\def\X{0}            % center x for all stages
+\def\gap{3.2}        % vertical spacing between stages
+\def\W{1.6}          % cylinder radius in x (ellipse a)
+\def\H{0.45}         % cylinder radius in y (ellipse b)
+\def\wall{0.18}      % wall thickness
+\def\segN{6}         % number of segments for stages 3–5
+\def\leglen{0.9}     % appendage length (stage 5)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stage 1: Polarized body (upright ellipse; anterior/posterior)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\coordinate (S1) at (\X,0);
+
+% body outline
+\draw (S1) ellipse [x radius=0.7, y radius=1.3];
+
+% anterior cap (visually distinct tip)
+\draw[fill=black!8] (\X,1.3) ellipse [x radius=0.35, y radius=0.25];
+
+% polarity markers
+\draw[->] (\X+1.2,1.0) -- ++(0,0.5) node[above] {anterior};
+\draw[->] (\X+1.2,-1.0) -- ++(0,-0.5) node[below] {posterior};
+
+\node[anchor=west] at (\X+2.2,0) {Polarized body (anterior--posterior)};
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Arrow to next
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\draw[->, very thick] (\X, -1.8) -- ++(0,-0.8);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Helper macro to draw a hollow cylinder at center C=(x,y) with width W, height H, wall thickness T
+% Includes front inner/outer rims (solid), back inner/outer rims (dashed), and side walls
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\HollowCylinder}[4]{% Cx,Cy,W,H
+  \pgfmathsetmacro{\Cx}{#1}
+  \pgfmathsetmacro{\Cy}{#2}
+  \pgfmathsetmacro{\a}{#3}
+  \pgfmathsetmacro{\b}{#4}
+  \pgfmathsetmacro{\ai}{\a-\wall}
+  \pgfmathsetmacro{\bi}{\b-\wall}
+  % back rims (dashed)
+  \draw[dashed] (\Cx,\Cy) ellipse [x radius=\a, y radius=\b];
+  \draw[dashed] (\Cx,\Cy) ellipse [x radius=\ai, y radius=\bi];
+  % side walls
+  \draw (\Cx-\a,\Cy) -- (\Cx-\ai,\Cy);
+  \draw (\Cx+\a,\Cy) -- (\Cx+\ai,\Cy);
+  % front rims (solid)
+  \draw (\Cx,\Cy) ellipse [x radius=\a, y radius=\b];
+  \draw (\Cx,\Cy) ellipse [x radius=\ai, y radius=\bi];
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stage 2: Hollow cylinder (tube)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\coordinate (S2) at (\X,-\gap);
+\HollowCylinder{\X}{-\gap}{\W}{\H}
+\node[anchor=west] at (\X+2.2,-\gap) {Tubular (hollow cylinder)};
+
+% Arrow to next
+\draw[->, very thick] (\X, -\gap-1.0) -- ++(0,-0.8);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Helper macro: segmented hollow cylinder
+% draws vertical segment lines along body, leaving lumen continuous
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\SegmentedHollowCylinder}[5]{% Cx,Cy,W,H,segments
+  \pgfmathsetmacro{\Cx}{#1}
+  \pgfmathsetmacro{\Cy}{#2}
+  \pgfmathsetmacro{\a}{#3}
+  \pgfmathsetmacro{\b}{#4}
+  \pgfmathsetmacro{\n}{#5}
+  % base hollow cylinder
+  \HollowCylinder{\Cx}{\Cy}{\a}{\b}
+  % segment separators (outer wall only)
+  % place \n-1 separators between -a and +a
+  \pgfmathsetmacro{\step}{(2*\a)/\n}
+  \foreach \k in {1,...,\numexpr\segN-1\relax}{
+    \pgfmathsetmacro{\xx}{\Cx - \a + \k*\step}
+    % draw short verticals for outer wall separation (avoid crossing the ellipse caps)
+    \draw (\xx,\Cy+\b) -- (\xx,\Cy+\b+0.25);
+    \draw (\xx,\Cy-\b) -- (\xx,\Cy-\b-0.25);
+    % a subtle cue across the wall thickness
+    \draw (\xx,\Cy+\b) -- (\xx,\Cy+\b-0.25);
+    \draw (\xx,\Cy-\b) -- (\xx,\Cy-\b+0.25);
+  }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stage 3: Segmented hollow cylinder (contiguous segments)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\coordinate (S3) at (\X,-2*\gap);
+\SegmentedHollowCylinder{\X}{-2*\gap}{\W}{\H}{\segN}
+\node[anchor=west] at (\X+2.2,-2*\gap) {Segmented hollow cylinder (contiguous lumen)};
+
+% Arrow to next
+\draw[->, very thick] (\X, -2*\gap-1.0) -- ++(0,-0.8);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stage 4: Bilaterally symmetrical hollow segmented cylinder
+% add a vertical midline and mirrored lateral wall accents per segment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\coordinate (S4) at (\X,-3*\gap);
+\SegmentedHollowCylinder{\X}{-3*\gap}{\W}{\H}{\segN}
+
+% midline symmetry cue
+\draw[dash dot] (\X,-3*\gap-1.0) -- (\X,-3*\gap+1.0);
+
+% mirrored wall accents (tiny symmetric ticks per segment)
+\pgfmathsetmacro{\stepx}{(2*\W)/\segN}
+\foreach \k in {0,...,\numexpr\segN\relax}{
+  \pgfmathsetmacro{\xx}{\X - \W + \k*\stepx}
+  % left & right tiny ticks near the wall (symmetric)
+  \draw (\xx,-3*\gap+\H+0.15) -- ++(-0.18,0);
+  \draw (\xx,-3*\gap+\H+0.15) -- ++(0.18,0);
+  \draw (\xx,-3*\gap-\H-0.15) -- ++(-0.18,0);
+  \draw (\xx,-3*\gap-\H-0.15) -- ++(0.18,0);
+}
+
+\node[anchor=west,align=left] at (\X+2.2,-3*\gap)
+  {Bilaterally symmetrical\\hollow segmented cylinder};
+
+% Arrow to next
+\draw[->, very thick] (\X, -3*\gap-1.0) -- ++(0,-0.8);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stage 5: Same as 4 + bilaterally symmetrical appendages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\coordinate (S5) at (\X,-4*\gap);
+\SegmentedHollowCylinder{\X}{-4*\gap}{\W}{\H}{\segN}
+
+% midline symmetry cue
+\draw[dash dot] (\X,-4*\gap-1.0) -- (\X,-4*\gap+1.0);
+
+% appendages: paired legs from the outer wall, symmetric L/R at select segments
+% choose every other segment index for neatness
+\pgfmathsetmacro{\stepx}{(2*\W)/\segN}
+\foreach \k in {1,3,5}{
+  \pgfmathsetmacro{\xx}{\X - \W + \k*\stepx}
+  % left legs (upper and lower)
+  \draw (\xx,-4*\gap+\H) -- ++(-\leglen, 0.45);
+  \draw (\xx,-4*\gap-\H) -- ++(-\leglen,-0.45);
+  % right legs (upper and lower)
+  \draw (\xx,-4*\gap+\H) -- ++(\leglen, 0.45);
+  \draw (\xx,-4*\gap-\H) -- ++(\leglen,-0.45);
+}
+
+\node[anchor=west,align=left] at (\X+2.2,-4*\gap)
+  {Bilaterally symmetrical\\appendages on segmented body}; 
+  
+\end{tikzpicture}
+\caption{Schematic, vertically aligned progression: (1) polarized body, (2) hollow cylinder, (3) segmented hollow cylinder, (4) bilaterally symmetrical hollow segmented cylinder, (5) same with bilaterally symmetrical appendages.}
+\end{figure}
+

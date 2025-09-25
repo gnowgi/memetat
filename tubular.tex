@@ -1,50 +1,18 @@
 
-\subsection{Tubularity and Flow-Guided Control}
+\subsection{Tubularity and the Genesis of Haltable Action Patterns}
 \label{subsec:tubular}
 
-The broad body plan of a cognitive agent is tubular and topologically a torus. Most multi-cellular organisms during development indicate that the underlying form is that of a torus. Specialized morphogenesis, leading to differentiation, results in the final shape appearing differently, but the fundamental toroidal structure remains.
+\paragraph{From aquatic beginnings to tubes that manage flow}
+Life’s first challenges were hydraulic. In low-Reynolds aquatic worlds \ref{reynolds-number}, unicellular eukaryotes solved feeding by \emph{making} flow: beating cilia generate and steer local currents to trap particles and microbes, with coordination handled by planar polarity and basal-body geometry \citep{Brooks2014Multiciliated,Shekhar2023CooperativeHydrodynamics}. Sessile poriferans scaled this idea up into an \emph{aquiferous system}: tubes-within-tubes where choanocyte pumps create a persistent, largely unidirectional stream from ostia to osculum; critically, sponges also \emph{shut} this flow through whole-body contractions—even without nerves or muscles—to gate filtration when conditions demand it \citep{Goldstein2020SpongeContractions,Morganti2019SpongePumping}. Cnidarians elaborated a gastrovascular sac that doubles ingestion and egestion through a single orifice, sometimes housing endosymbionts in a protected internal micro-habitat. Later, bilaterians evolved a through-gut with separate mouth and anus—an innovation repeatedly analyzed in comparative embryology and evo-devo as a key step toward efficient, directional processing \citep{Hejnol2015AnalEvolution,Nielsen2018MouthAnus,Presnell2016ThroughGut}. In many lineages, tubular logic spread internally: peristaltic vessels, valves, and eventually hearts moved fluids at scale \citep{MonahanEarley2013BVS}. Neural tubes, by contrast, appear with chordates and serve to coordinate bilateral action systems rather than to transport fluid \citep{Holland2015ChordateNervous}. 
 
-\marginpar{Tubes turn space into \emph{lines of action}.}
-Across phyla, development repeatedly builds \emph{tubes}: tracheae and lungs, vasculature, gut, renal and exocrine ducts, neural projections.
-This convergence is not incidental; tubularity transforms 3D uncertainty into \emph{1D manifolds} along which signals and matter move predictably.
-In the SMN, tubes function as \emph{computational waveguides}: they stabilize rhythmic action (peristalsis, pulsation), furnish interrupt points (sphincters, valves), and project vectors for navigation and exchange.
+\paragraph{The one-way-flow principle and the cost of letting things run}
+Across these body plans, a single control principle recurs: keep bulk flow \emph{one-way}. Biophysical solutions include ciliary metachrony, peristaltic waves, check-valves and sphincters, and pulsatile pumps. Recent work in echinoderm larvae shows explicit \emph{gating} at the pylorus and anus to prevent simultaneous entry/exit—an elegant neural solution to enforce unidirectionality in a simple through-gut \citep{Yaguchi2024Sphincter}. But one-way flow is not always optimal to maintain continuously: pumps cost energy, and stereotyped run-to-completion routines can be maladaptive when the world changes. The evolutionary response we emphasize is the emergence of mechanisms that \emph{can stop or pause} ongoing flows. 
 
-\paragraph{Evo--devo foundations.}
-Tube morphogenesis is a conserved solution to transport, exchange, and signaling; it integrates epithelial polarity, lumen formation, and branching programs \cite{LubarskyKrasnow2003TubeMorphogenesis,AffolterZellerCaussinus2009Branching,VarnerNelson2014Branching}.
-Branching morphogenesis leverages local growth rules and mechanical constraints to generate efficient, deeply nested transport trees---a substrate ready-made for rhythmic control and interruptibility.
+\paragraph{From FAPs to HAPs: making stereotyped patterns stoppable}
+Classical ethology described many stereotyped, energetically committed routines as \emph{fixed action patterns} (FAPs) \citep{Ronacher2019FAP}. We propose the complementary notion of \emph{haltable action patterns} (HAPs): peripheral motor programs that remain \emph{competent} to run (often via local myogenic/enteric patterning), but are equipped with neural (and sometimes humoral) control layers that can \emph{gate, suspend, or terminate} the pattern quickly when context flips. The gastrointestinal tract is a template case: peristalsis is generated and modulated by enteric circuits and interstitial cells, but is routinely gated by sphincters and by central inputs \citep{Sharkey2022ENS}. In worms and mammals, swallowing launches a peristaltic wave, yet breathing is temporarily suppressed (\emph{deglutition apnea}); recent work identifies a brainstem “postinspiratory complex” (PiCo) that interfaces the swallow CPG with the respiratory Central Pattern Generators (CPG) \ref{CPG} to orchestrate this on-the-fly halting and sequencing \citep{Matsuo2009Coordination,Barlow2009CPGOralResp,Moore2014BrainstemOrofacial,Huff2023PiCo}. 
 
-\paragraph{Electrical and physiological polarity.}
-Tubulogenesis depends on \emph{apico--basal polarity}, tight junctions, and ion-handling machinery that generate transepithelial potentials and osmotic flows.
-Endogenous electrical cues can \emph{bias tubule orientation and cell migration}, while bioelectric patterning supports stable lumen identities and multi-stable organ-scale states \cite{McCaigRajnicekSongZhao2005ElecControl,Levin2014MolecularBioelectricity}.
-These mechanisms provide the electrical degrees of freedom by which the SMN modulates tube-based actions.
+\paragraph{Early HAP exemplars: buccal capture, swallowing, breathing}
+Some of the earliest cross-taxa HAPs are in the buccal–pharyngeal complex: \emph{selectively} capturing a bit of the world, holding it, and then either admitting or ejecting it. In nematodes, the pharynx is a tubular neuromuscular pump with intrinsic rhythmicity and a compact “enteric” circuit; pumping rates and particle transport are rapidly up- or down-modulated by neuromodulators and sensory state—i.e., the pattern is powerful but \emph{haltable} \citep{Avery2012CelegansFeeding,Trojanowski2016PharyngealPumping}. In vertebrates, orofacial CPGs (lick, chew, swallow, breathe, vocalize) are coupled but separable; sensory and cortical inputs can gate transitions and suspend one rhythm in favor of another (e.g., pause breathing to swallow; abort swallow to cough) \citep{Moore2014BrainstemOrofacial,Matsuo2009Coordination,Huff2023PiCo}. These mechanisms make selection possible at the entry point: to \emph{withhold}, \emph{sort}, and \emph{sample}—a clear epistemic move from “let it pass” to “hold and judge.” 
 
-\paragraph{Habitat coupling: fluid and gravity.}
-Fluid forces are not mere consequences; they are \emph{causal} inputs into tube development and function.
-During cardiogenesis, intracardiac flow and shear stresses are essential for proper morphogenesis \cite{HoveKoster2003CardioFlow}.
-In respiratory and mucociliary tissues, hydrodynamic coupling aligns ciliary beats and creates metachronal waves that coordinate transport \cite{GuiraoJoanny2007CiliaFlow}.
-Gravity shapes hydrostatic pressure gradients and affects perfusion and drainage; in aquatic settings, viscosity and buoyancy set Reynolds-number regimes that favor oscillatory pumping and smooth reversals \cite{Vogel1994LifeInMovingFluids}.
-\marginpar{Medium physics co-implements control.}
-
-\paragraph{Control affordances of tubes.}
-Tubes supply three computational assets to the SMN:
-\begin{enumerate}
-  \item \textbf{Rhythmic carriers:} Peristaltic and pulsatile waves act as carriers for \emph{tokens} (bolus segments, pressure pulses) that can be gated, counted, or sequenced.
-  \item \textbf{Interrupt points:} Valves and sphincters implement \emph{haltability} and re-routing with minimal overhead.
-  \item \textbf{Vectors and gradients:} Axial geometry defines preferred directions for flow, chemo--electrical gradients, and information traffic, reducing planning complexity to one dimension.
-\end{enumerate}
-\marginpar{Tubes = built-in counters, gates, and guides.}
-
-\paragraph{Thermodynamic economy and habitat-assisted computation.}
-By confining control to low-dimensional tube axes and exploiting stable fluid/gravity regularities, organisms reduce the need for costly internal writes and resets.
-Tokens are carried by the medium, \emph{not stored}; they dissipate naturally unless captured by gates.
-This is Landauer-consistent economy: less logical irreversibility internally, more computation via coupling to lawful environmental dynamics \cite{Landauer1961Irreversibility,Bennett2003LandauerNotes,StillEtAl2012ThermoPrediction}.
-
-\paragraph{Formalization sketch.}
-Let $u(s,t)$ denote axial flow or wall activation along arc-length $s$ of a tube; peristaltic waves are traveling-wave solutions $u(s,t)=A\cos(ks-\omega t)$.
-\emph{Tokens} are localized pulses or thresholded mass/charge packets advected with speed $v$; \emph{interrupts} are boundary conditions (valves) switching between transmitting/reflection states.
-Branching yields a directed acyclic graph whose edges are 1D manifolds; \OAP{}s correspond to sequences of valve states routing tokens to task-defined sinks.
-\todo{Figure: (i) branching tube network, (ii) token pulses, (iii) valve state machine, (iv) coupling fields (shear, pressure, voltage) as control knobs.}
-
-\paragraph{SMN vs Habitat (capsule).}
-\textbf{SMN:} tube-aligned controllers use gates/valves to sequence \OAP{}s on 1D manifolds.
-\textbf{Habitat:} fluid mechanics (shear, pressure, viscosity) carries tokens for free and shapes feasible timing, so tubes compute by coupling to the medium rather than by rewriting internal state.
+\paragraph{Cognitive moral: selectivity rides on stoppability}
+The tubular architecture first solved \emph{transport}, but its success hinged on \emph{control of stoppage}: sphincters as gates, valves as decision points, and CPGs under inhibitory and neuromodulatory oversight. The move from FAP-like “always on” pumping to HAP-like “as needed” control economizes energy, reduces wear, and—crucially—enables \emph{discrete choices}: palatable vs.\ not, safe vs.\ unsafe, admit vs.\ reject. In that sense, categorization at the mouth is already cognition—realized as \emph{haltable} motor programs riding a tubular body plan.

@@ -39,13 +39,15 @@ In the simplest case, a lattice of phase oscillators (Kuramoto-type) produces sm
 \begin{align}
 \dot{\theta}_i &= \omega_i + \sum_{j \in \mathcal{N}(i)} K_{ij} \sin(\theta_j - \theta_i - \phi_{ij}) + u_i(t),
 \end{align}
-where $u_i(t)$ encodes halts (HAPs) and transactional reconfigurations (TAPs) via temporary changes to $\omega_i$ or $K_{ij}$.
+where $u_i(t)$ encodes halts (HAPs) and negotiable reconfigurations (NAPs) via temporary changes to $\omega_i$ or $K_{ij}$.
 \marginpar{Kuramoto lattice as a \emph{control surface}.}
 \todo{Figure: (i) segmented chain with CPGs, (ii) phase-lag targets for swimming/walking, (iii) local phase reset producing a step or turn, (iv) habitat arrows (gravity/fluid) shaping feasible lags.}
 
 \paragraph{SMN vs Habitat (capsule).}
-\textbf{SMN:} segmental CPGs coordinate via local phase rules; interrupts stay local and compose into \OAP{}s.
+\textbf{SMN:} segmental CPGs coordinate via local phase rules; interrupts stay local and compose into \NAP{}s.\footnote{NAPs are often realized by oscillator assemblies (OAPs in earlier drafts), but their distinct feature is negotiability: they can be rephased, reweighted, and recombined rather than running as stereotyped oscillations.}
 \textbf{Habitat:} gravity partitions load across segments; fluids reward traveling-wave phase lags—medium structure constrains and simplifies coordination.
 
 \paragraph{Adaptation.}
 Segmental CPGs adapt phase/gain through local plasticity while surrounding tissues update bioelectric set-points, stabilizing desired phase-lag patterns for common gaits and enabling quick local interrupts without global rewrites.
+
+Segmentation discretizes control into re-usable modules, making \emph{locally composable} HAPs. SMN leverages segmental synergies to retime and recombine actions with low wiring cost \citep{BizziCheung2013}.

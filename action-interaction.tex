@@ -23,14 +23,17 @@ From this perspective, cognition is not the passive registration of physical int
 % \usetikzlibrary{arrows.meta, positioning, fit, backgrounds}
 
 % --- adjustable width to accommodate custom margins ---
-\newcommand{\layerwidth}{0.8\linewidth} % change to 1.05\linewidth if you want to extend into a left margin
+% \newcommand{\layerwidth}{0.8\linewidth} % change to 1.05\linewidth if you want to extend into a left margin
 
 \begin{figure}[t]
 \centering
 \begin{tikzpicture}[
   font=\small,
   >=Latex,
-  box/.style={draw=black, rounded corners=6pt, line width=0.6pt, inner sep=6pt, fill=gray!4, align=left, text width=\layerwidth},
+  box/.style={
+    draw=black, rounded corners=6pt, line width=0.6pt,
+    inner sep=6pt, fill=gray!4, align=left, text width=\layerwidth
+  },
   title/.style={font=\bfseries},
   bullet/.style={inner sep=0pt, outer sep=0pt},
   arrowup/.style={-{Latex[length=3.5mm]}, line width=0.6pt},
@@ -38,31 +41,37 @@ From this perspective, cognition is not the passive registration of physical int
 ]
 
 % --- Layers (bottom to top) ---
-\node[box] (phys) {
-  {\bfseries Physical Interaction}\\[-0.3em]
-  \begin{itemize}[left=1.2em]
-    \item symmetric laws; reciprocity (e.g., $F_{AB}=-F_{BA}$)
-    \item conservation (energy, momentum, charge)
-    \item no agent required; lawful dynamics
-  \end{itemize}
+\node[box] (phys) {%
+  \parbox{\layerwidth}{%
+    \textbf{Physical Interaction}\\[-0.3em]
+    \begin{itemize}[left=1.2em]
+      \item symmetric laws; reciprocity (e.g., $F_{AB}=-F_{BA}$)
+      \item conservation (energy, momentum, charge)
+      \item no agent required; lawful dynamics
+    \end{itemize}
+  }%
 };
 
-\node[box, above=10mm of phys] (action) {
-  {\bfseries Action (Agentive / Biological)}\\[-0.3em]
-  \begin{itemize}[left=1.2em]
-    \item local symmetry-breaking; imposed gradients
-    \item energy expenditure; far-from-equilibrium
-    \item agency \& normativity (success/failure)
-  \end{itemize}
+\node[box, above=10mm of phys] (action) {%
+  \parbox{\layerwidth}{%
+    \textbf{Action (Agentive / Biological)}\\[-0.3em]
+    \begin{itemize}[left=1.2em]
+      \item local symmetry-breaking; imposed gradients
+      \item energy expenditure; far-from-equilibrium
+      \item agency \& normativity (success/failure)
+    \end{itemize}
+  }%
 };
 
-\node[box, above=10mm of action] (social) {
-  {\bfseries Social Transactions (Intersubjective)}\\[-0.3em]
-  \begin{itemize}[left=1.2em]
-    \item coordination of actions; shared norms \& meanings
-    \item dialog, joint attention, conventions
-    \item evaluable in social/ethical space
-  \end{itemize}
+\node[box, above=10mm of action] (social) {%
+  \parbox{\layerwidth}{%
+    \textbf{Social Transactions (Intersubjective)}\\[-0.3em]
+    \begin{itemize}[left=1.2em]
+      \item coordination of actions; shared norms \& meanings
+      \item dialog, joint attention, conventions
+      \item evaluable in social/ethical space
+    \end{itemize}
+  }%
 };
 
 % --- Upward emergence arrows ---
@@ -70,32 +79,39 @@ From this perspective, cognition is not the passive registration of physical int
 \draw[arrowup] (action.north) -- node[right=2pt, align=left] {emerges from /\\ coordinated by} (social.south);
 
 % --- Downward constraint arrows (dashed) ---
-\draw[arrowdown] (social.south east)++(-8mm,0) -- ++(0,-8mm) node[midway, right=2pt, align=left] {normative\\ constraints};
-\draw[arrowdown] ([xshift=8mm]action.south east) -- ++(0,-8mm) node[midway, right=2pt, align=left] {task/goal\\ constraints};
+\draw[arrowdown] (social.south east)++(-8mm,0) -- ++(0,-8mm)
+  node[midway, right=2pt, align=left] {normative\\ constraints};
+\draw[arrowdown] ([xshift=8mm]action.south east) -- ++(0,-8mm)
+  node[midway, right=2pt, align=left] {task/goal\\ constraints};
 
-% --- Braces for inclusion hierarchy (optional, comment out if not needed) ---
+% --- Background emphasis boxes (optional) ---
 \begin{scope}[on background layer]
-  % faint background boxes to emphasize inclusion (same widths as nodes)
-  \node[fit=(phys), fill=gray!2, draw=gray!40, rounded corners=6pt, inner sep=10pt] {};
+  \node[fit=(phys),   fill=gray!2, draw=gray!40, rounded corners=6pt, inner sep=10pt] {};
   \node[fit=(action), fill=gray!2, draw=gray!40, rounded corners=6pt, inner sep=10pt] {};
   \node[fit=(social), fill=gray!2, draw=gray!40, rounded corners=6pt, inner sep=10pt] {};
 \end{scope}
 
 % --- Caption label inside figure (optional) ---
-\node[below=6mm of phys, align=center] (cap) {\emph{Layered ontology:} actions are energy-expending, symmetry-breaking\\
-perturbations enacted by agents; social transactions are coordinated networks of actions.};
+\node[below=6mm of phys, align=center] (cap) {%
+  \emph{Layered ontology:} actions are energy-expending, symmetry-breaking\\
+  perturbations enacted by agents; social transactions are coordinated networks of actions.%
+};
 
 \end{tikzpicture}
+
 \caption{Vertical layered representation distinguishing symmetric \emph{physical interactions}, agentive \emph{actions} (asymmetry, energy use, normativity), and \emph{social transactions} as coordinated networks of actions with intersubjective norms. Upward arrows denote emergence/grounding; dashed downward arrows indicate top-down constraints.}
 \label{fig:action-interaction-layers}
 \end{figure}
 
+
+
+
 \subsubsection{A Principle of Inertia of Cognitive Phenomena}
-\textbf{Action Patterns: }The unit of analysis for cognition is \textit{action patterns}, and not actions \cite{bateson2000steps}.  This requires us to shift our attention from actions \textit{per se} to \textit{change in actions}. Actions are identified or distinguished on the basis of a change in actions or simply action patterns. When we refer to the pattern, we are referring to the pattern of change, a temporal feature of action and not a static structure. 
+\textbf{Action Patterns: }The unit of analysis for cognition is \textit{action patterns}, and not actions.  This requires us to shift our attention from actions \textit{per se} to \textit{change in actions}. Actions are identified or distinguished on the basis of a change in actions or simply action patterns. When we refer to the pattern, we are referring to the pattern of change, a temporal feature of action and not a static structure. 
 
 We could then define an idealized inertial state as a model system:  \textit{A cognitive agent remains in its state of pre-existing action-patterns, until halted by either internal or external affordances.} 
 
-This postulate is justified by the insight that \textit{differentiation of difference} is a valid condition for cognitive awareness.\cite{bateson2000steps} Deviation from a pattern has more information than an invariant pattern. The term `fixed-action-patterns' (FAPs) originated in ethology to describe several overt but innate (inborn) behavioral patterns. We use the term to describe not only the overt behavioral action patterns, but also action patterns inside the body: heart-beat, ingesting, swallowing, peristalsis, along with the overt patterns such as walking, running, scratching, pruning, digging, swimming etc.  Considering that these are genetic, they become the \textit{action schema} available as potential \textit{conceptual schema} for grasping the world around them.  Here, we follow the path adopted by Jean Piaget's neo-Kantian genetic epistemology.\cite{piaget-biology-knowledge}
+This postulate is justified by the insight that \textit{differentiation of difference} is a valid condition for cognitive awareness.\cite{bateson2000steps} Deviation from a pattern has more information than an invariant pattern. The term `fixed-action-patterns' (FAPs) originated in ethology to describe several overt but innate (inborn) behavioral patterns. We use the term to describe not only the overt behavioral action patterns, but also action patterns inside the body: heart-beat, ingesting, swallowing, peristalsis, along with the overt patterns such as walking, running, scratching, pruning, digging, swimming etc.  Considering that these are genetic, they become the \textit{action schema} available as potential \textit{conceptual schema} for grasping the world around them.  Here, we follow the path adopted by Jean Piaget's neo-Kantian genetic epistemology.\cite{piaget-biology-knowledge}  We will use these principles and ground mental representations in ``muscular activity patterns'' within the SMN\cite{land-schack-2013frontiers}.
 
 \subsubsection{Actions Precede Coordination of Actions}
 

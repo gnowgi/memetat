@@ -1,0 +1,21 @@
+
+\paragraph{Primer: what is a ``low–Reynolds-number'' aquatic world?}\label{reynolds-number}
+The Reynolds number is a dimensionless ratio that compares inertial to viscous forces in a fluid:
+\[
+\mathrm{Re}=\frac{\rho U L}{\mu},
+\]
+where $\rho$ is fluid density, $U$ a characteristic speed, $L$ a characteristic length, and $\mu$ the dynamic viscosity. 
+When $\mathrm{Re}\ll 1$ (typical for microorganisms with $L\sim 10$–$100~\mu$m swimming or pumping in water at $U\sim 10^2$–$10^3~\mu$m/s), flows are \emph{Stokesian}: inertia is negligible, viscous drag dominates, and motion stops almost instantly when forcing stops—no ``coasting.'' 
+The Stokes equations are time-reversible, so reciprocal, back-and-forth strokes do not yield net transport (\emph{Purcell’s scallop theorem}). 
+To generate one-way transport or locomotion, organisms must execute non-reciprocal cycles (e.g., ciliary metachronal waves) or propagate traveling waves along tubes (peristalsis), often aided by valves/sphincters to prevent backflow. 
+Mixing is also difficult (laminar, low turbulence), so many systems rely on continuous pumping and geometric gating to maintain directional flows in tubular architectures \citep{Purcell1977LowRe, BrennenWinet1977CiliaFlagella, LaugaPowers2009MicroSwimmers, Guasto2012Planktonic, Vogel1994LifeMovingFluids, Shapiro1969Peristalsis}.
+
+
+\paragraph{Primer: what is a \emph{central pattern generator} (CPG)?}\label{CPG}
+A CPG is a neural circuit that can produce rhythmic, patterned motor output \emph{without requiring rhythmic sensory input} \citep{MarderCalabrese1996PR,MarderBucher2001CB}. Classic architectures include \emph{half–center oscillators}—two (or more) pools of interneurons linked by reciprocal inhibition—already envisaged in Brown’s pioneering work on locomotion \citep{Brown1911IntrinsicProgression}. Rhythmogenesis can arise from (i) \textit{pacemaker} neurons with intrinsic bursting currents, (ii) \textit{network} oscillators built from synaptic inhibition/excitation (including post-inhibitory rebound), or (iii) hybrids of both \citep{Grillner2006Neuron,Kiehn2016NRN}. 
+
+\textbf{What makes CPGs useful?} They deliver high-dimensional, phase-coordinated commands (frequency, duty cycle, interlimb/antiphase relations) while accepting low-dimensional control signals (start/stop, speed, “gait” selection). Their outputs are \emph{reconfigurable}: neuromodulators retune intrinsic and synaptic parameters to switch frequency, phase relationships, and even pattern identity—multifunctionality in compact circuits \citep{NusbaumBeenhakker2002Nature,Marder2012Neuromod}. 
+
+\textbf{Gating, stoppability, and HAPs.} Although CPGs can run autonomously, in vivo they are \emph{gated} by descending commands and sensory feedback (phase-resetting, reflex gating) so that rhythmic programs can be \emph{initiated, paused, resumed, or terminated} on short timescales. This “stoppability” links CPGs to our notion of \emph{haltable action patterns} (HAPs): robust generators whose continuation is contingent on context. Exemplars include spinal locomotor CPGs \citep{Kiehn2016NRN}, the brainstem respiratory generator (preB\"otzinger complex) and its couplings \citep{DelNegro2018BreathingMatters}, and orofacial CPGs for chew–lick–swallow that coordinate with breathing via switch-like gating \citep{Moore2014OrofacialCPG}. 
+
+\textbf{From biology to engineering.} CPG principles have informed robotics controllers that capture animal-like robustness and smooth transitions between gaits; analytical models such as the Matsuoka oscillator formalize how reciprocal inhibition plus adaptation yields stable rhythmic output under tonic drive \citep{Ijspeert2008NN,Matsuoka1985BiolCybern}.

@@ -1,113 +1,168 @@
 \section{Introduction}
 \label{sec:introduction}
-The study of cognition is marked by a fundamental tension between seemingly irreconcilable research programs. On one side, cognitivism, rooted in a nativist information processing paradigm, seeks to explain phenomena like language and reasoning through amodal representations and computatable rules, often claimed to be located within the brain \cite{chomsky1965aspects, fodor_modularity_1983}. On the other, 4E (embodied, embedded, enactive, and extended) approaches ground cognition in the dynamic, situated actions of an agent's entire body within its environment \cite{varela1991embodied,  maturana1991autopoiesis, noe_action_2004}. While both camps agree on a evolutionary and biological basis for cognition \cite{chomsky1965aspects, varela1991embodied}, their foundational assumptions about the nature of the body and its role in mental life have led to decades of disagreement. This paper argues that this impasse stems from an incomplete understanding of the biological architecture that underpins cognition. We proceed from the assumption that a correct model of this architecture is the necessary foundation upon which any successful theory of cognition must be built. Most of cognitive phenomena fall in place if assume the proposed architecture and dynamics of the body situated in the world, transforming the world into a habitat, which in-turn transforms into a memetat: an abductive argument.
 
-We propose that the core challenge for cognitive science is to answer a set of interrelated questions: (1) What structures and dynamics are necessary for phenomenological experience—the so-called ``hard problem'' \cite{chalmers1995facing}—to arise? (2) How does a cognitive agent construct a stable, geometric picture of its internal and external worlds? (3) How can this generated picture be shared meaningfully with other agents? To address these, we depart from neuro-centric models and introduce an alternative framework centered on a specific, yet generalizable, model of a cognitive agent's body plan.
+The study of cognition has seen major shifts over the last century. Early work was dominated by behaviorism, with rigorous experimental models of conditioning, reinforcement, and associative learning in both animals and humans, united by a commitment to externally observable behavior \citep{pavlov1927, skinner1938, skinner1953science, thorndike1898, watson1913psychology}. These models were later criticized for their inability to account for human language, leading to the rise of cognitivism. Cognitivist accounts posited an innate language faculty, modular brain regions, and a distinctive generative syntax \citep{chomsky1965aspects, chomsky1986knowledge, fodor1975language, fodor_modularity_1983, pinker1994language, pinker1997mind}. Despite agreement that cognition has biological and evolutionary roots, the two traditions diverged on whether human–animal differences are of degree or of kind, and whether they arise from nurture or nature \citep{chomsky1975reflections, pinker2002blankslate, watson1924behaviorism, skinner1971beyond}. A parallel line of thought, drawing on neo-Kantian and dialectical traditions, emphasized the interplay of internal and external conditions in shaping cognition \citep{piaget-biology-knowledge, piaget1970genetic, ponty1969phenomenology, Merleau-Ponty2013-vs, Vygotsky1978-bk}.
 
-\subsection{A Thought Experiment: The Alien Spaceship Mission}
-To make these abstract questions concrete, consider the following thought experiment. An alien mission has sent a spaceship on an expedition to Earth to construct a picture of the world. The spaceship has various sensors (transducers) on its outer surface and inside—light, sound, contact, temperature, and chemosensors. It has an internal (inbuilt) clock and an internal sense of time, but no pre-built location sensors, though it has accelerometers to detect changing states of motion. Complicating matters, the crew is strictly confined to the ship and cannot physically move out to explore the world they seek to understand.
+Today the field is marked by a fundamental tension between two dominant programs. On one side, cognitivism—rooted in a nativist, information-processing paradigm—explains language and reasoning through amodal representations and computational rules, often assumed to reside in the brain \citep{chomsky1965aspects, fodor_modularity_1983}. On the other, 4E approaches (embodied, embedded, enactive, extended) ground cognition in the dynamic, situated action of the whole body within its environment \citep{varela1991embodied, maturana1991autopoiesis, noe_action_2004, gallagher2023-book, hutto2012radicalizing}. While both perspectives recognize the evolutionary and biological basis of cognition \citep{chomsky1965aspects, varela1991embodied}, they part ways on the role of the body: whether it is merely an implement for brain-based processes or a constitutive ground of mental life. This disagreement has persisted for decades. We return to it in detail in Section~\ref{sec:comparison}.
+ 
+This monograph argues that this impasse stems from an incomplete and inaccurate understanding of the biological architecture, and the role played by each of the organs that are part of the architecture in various aspects of cognition. We proceed from the assumption that a comprehensive architecture is the necessary foundation upon which any successful theory of cognition must be built. Most of cognitive phenomena fall in place if assume the proposed architecture and dynamics of the body situated in the world. 
 
-The engineers who built the ship placed the sensors at various locations, with connectors to make signals from the sensors available to respective processing chips. An integrated snapshot is constructed only on the basis of concurrency (at any given point in time) on their dashboards. Since all signals are encoded similarly, they have no signature of where they are coming from (sources), including whether causes for the signals are generated from within the ship or from outside.
-
-The crew's mission is to locate the source of the input signals coming from the sensors and construct a comprehensive picture of the world. The ship's crew knows only how to count and compute the signals coming from the sensors. The programmers and mathematicians can write programs to compute, and their mechanical/electrical engineers can design and deploy actuators and additional sensors as and when necessary. If \textit{and only if} required, a few more such ships can be deployed for the mission, and they can share results through their communication channels.
-
-What do they need to do within the ship to compute the location of the source of the input signals? How did the crew construct the picture (geometry) of the world? The answer to this puzzle is expected to be in the form of the mechanism—structure and dynamics—of the spaceship.
-
-This thought experiment captures the essence of the cognitive problem: how does an agent, confined to its own body, construct a meaningful picture of both its internal and external worlds? The signals reaching the dashboards appear transiently. At any given time, there is a snapshot of signals, including those coming from various transducers. The snapshot passes from a temporally ordered stack of screens, from one screen to another at each passing instance. Since the tokens disappear instantly, the only way to hold onto a pattern for a while is to pass them to another chip. There is no inbuilt way of retrieving the snapshots. The only way is to recurrently subject the spaceship to similar exposures. Such is the phenomenology available to the crew.
-
-How do they differentiate a set of tokens as coming from a specific kind of transducer, so that each datatype can be distinguished? How do they distinguish signals coming from within the spaceship from outside? The crew is inside the 'cave' and cannot move out. What innovations must they make to construct a structure and dynamics of the world?
-
-This thought experiment illustrates that the core problem of cognition is fundamentally about constructing a geometric picture of the world through action-based differentiation, not passive reception of pre-given information. The spaceship crew's solution—developing actuators to modulate their sensory streams and create differentiated patterns—provides a key insight into how biological agents solve this same problem.
-
-\subsection{The Sensation-Modulating Network: A Solution Framework}
-Building on this insight, our central proposal is a dynamic architecture we term the Sensation-Modulating Network (SMN). We model the agent as a layered network of action zones, organized according to fundamental biological principles: segmented, polarized, bilaterally symmetrical, and antagonistically organized. Within this architecture, cognition emerges not from a central controller initiating action, but from the capacity to \textit{halt} and modulate ongoing, rhythmic action patterns. 
-
-To describe these dynamics, we introduce a specific terminology that will be developed throughout this paper (see Section~\ref{sec:model}): a hierarchy of patterns ranging from deep, immutable \textbf{Fixed Action Patterns (FAPs)}, to consciously accessible \textbf{Haltable Action Patterns (HAPs)}, which, when shared, become \textbf{Transactional Action Patterns (TAPs)}. It is this capacity for modulation, we argue, that grounds semiotics\cite{peirce1992essential}, enables the creation of symbols, and gives rise to generative syntax\cite{chomsky1965aspects}. As we will demonstrate in Section~\ref{sec:phenomena}, this framework provides a unified account of phenomenology, representation, and syntax.
-
-\subsection{Core Proposals of the SMN Framework}
-The SMN model is built on a set of rigorously formulated hypotheses that integrate both endogenous and exogenous conditions that make conscious cognition possible. Our core proposals include:
-
-\begin{enumerate}
-    \item \textbf{Cognitive world as mediated construct}: The cognitive world is a mediated construct of a geometric semiotic habitat, called \textit{memetat}, constructed through multiple, recursive, recurrent, and haltable serial action patterns, called \textit{memets}.
-    
-    \item \textbf{SMN as location computer}: A cognitive agent is modeled as a sensation modulating network (SMN), whose function is to compute the location of sensations by serially modulating action patterns called \textit{memets}.
-    
-    \item \textbf{Perception as differentiation}: Perception of the world is an outcome of placing the sensations relative to each other, using the principle of differentiation of difference (change in action patterns, not action patterns per se).
-    
-    \item \textbf{Layered antagonistic architecture}: The agent, an SMN, is a multilayered process network of antagonistic coordinated pairs oscillating at relatively high frequencies at the layer beneath---as fixed action patterns (FAP). The lower layers are mandatory and can be modulated with the least degrees of freedom. In contrast, the top layers can afford to halt, without deviating from the general oscillatory pattern---as haltable action patterns. Both FAPs and HAPs are dynamical systems.
-    
-    \item \textbf{DFN/IN functional distinction}: The bottom layers of the SMN provide a multi-dimensional cognitive stage in the form of an integrating network (IN) provided by the FAPs. In contrast, the top layers form a differentiating and filtering network (DFN) provided by the HAPs.
-    
-    \item \textbf{Imitability and encoding}: Imitability of action patterns, encoding by copying, enables the creation of Transactional Action Patterns (TAPs).
-    
-    \item \textbf{Traces and semiotic space}: Traces of action patterns create semiotic space, enabling external representations and shared memory.
-    
-    \item \textbf{Saturation spectrum}: Saturated and unsaturated HAPs create abstract space, where saturated HAPs are bound to objects while unsaturated HAPs become concepts.
-    
-    \item \textbf{Haltability mechanism}: The speculation of the mechanism that enables halting involves limited communication routes between coordinated pairs (CPs).
-    
-    \item \textbf{Meaning and value}: Deeper layers contribute to the meaning and value of actions, connecting to Damasio's work on emotion and cognition.
-    
-    \item \textbf{Rules and representations}: Rules and representations are grounded in generative syntax through TAPs, providing the foundation for symbolic thought.
-    
-    \item \textbf{Haltability as syntax condition}: Haltability is a necessary condition for syntax, as gaps in action patterns create the punctuation necessary for combinatorial structure.
-    
-    \item \textbf{Games and microworlds}: Cultural practices emerge as games and microworlds, constructed through rule-following actions that define transactional playgrounds.
-    
-    \item \textbf{Mimetics}: The framework supports extended mimetics, enabling the transmission and evolution of cultural practices.
-\end{enumerate}
-
-We are often misled by the \textit{apparent} anatomical peculiarities of the human body—the large brain, bipedal locomotion, dexterous hands, and sophisticated vocal apparatus—and the semiotic peculiarities that seem to correlate with them. This has led to a focus on what makes humans unique \cite{hauser2002uniquely}, rather than on the foundational biological principles we share with other animals. This paper argues for a model-driven approach that does not mistake correlation for causation. We contend that much of the biology relevant to cognition has been ignored precisely because it is not unique to humans. Our obsession with our own specialness has prevented us from seeing the general principles at work.
-
-\subsection{Historical Context: The Evolution of Cognitive Science}
-The study of cognition has undergone several fascinating advances during the last century. Initially dominated by rigorous experimental behaviorist models of learning among both animals and human beings covering conditioning, learning by associations, positive and negative reinforcement with a common methodological commitment to externally visible behavioral parameters \citep{pavlov1927, skinner1938, skinner1953science, thorndike1898, watson1913psychology}. These studies were criticized by another research program, widely known as cognitivism, for their inability to account for language acquisition among human beings, arguing for a peculiar innate language faculty attributable to specific and modular regions in the brain, while also underlining the peculiar generative syntax of human language \citep{chomsky1965aspects, chomsky1986knowledge, fodor1975language, fodor_modularity_1983, pinker1994language, pinker1997mind}. Despite their common ground of biological and evolutionary origins of cognitive abilities, they disagreed on the question of whether the differences between human and animal cognition is a matter of predominance or peculiarity and whether the sources of these differences are due to nurture or nature \citep{chomsky1975reflections, pinker2002blankslate, watson1924behaviorism, skinner1971beyond}. Among European scholarship, on the other hand, we notice a greater influence of neo-Kantian and dialectic approaches where both internal and external conditions affect human cognition \citep{piaget-biology-knowledge, piaget1970genetic, ponty1969phenomenology, Merleau-Ponty2013-vs, Vygotsky1978-bk}.
-
-Two major breakthroughs in science and technology helped us to understand so many things, while at the same time, they are also impeding cognitive science. The discovery of DNA, genetic code, genetic basis of variations leading to the modern synthetic theory of evolution, and the enormous and disruptive impact of information processing models in modern society have both illuminated and obscured our understanding of cognition. After all we knew from evolution that single or multi-cellular organisms exhibited movements as well as variations in patterns without a nervous system \citep{llinas2002vortex}. Even a lump of cardiac tissue is known to beat rhythmically, not only a detached beating heart from the body, leading to myogenic hypothesis \citep{landecker2007culturing}. Almost all animal cells have a cytoskeleton, to generate sufficiently sophisticated movements without a nervous system. The cells do navigate around their space even without depending on special sense organs, that is to say that every cell responds to stimulus, and have endogenous means of acting on the environment. More and more experimental evidence is catching up to show that non-neuronal cognitive phenomena, intelligence, memory and basal cognition are all over biological space \citep{Levin2023, biomimetics-Levin2023}. And almost all known material in the universe is electrically active \citep{Peratt1996plasma}, not merely the sense organs, muscles and the neurons in the body. Therefore to single out the nervous system for being a central cognitive organ based on phrenological studies is unfounded \citep{anderson2014phrenology}.
-
-What if movement does not require an initiating message from a control center? Physics teaches us that force is needed not to maintain motion, but to change it \cite{newton1687principia}. Borrowing this insight, we speculate that the nervous system's primary cognitive role is not to initiate action, but to \textit{alter} it. This is not an ungrounded speculation. We know that organisms without nervous systems exhibit movement and that even isolated cardiac tissue can beat rhythmically \citep{llinas2002vortex, landecker2007culturing}. The capacity for action is intrinsic to living tissue; the challenge is to control it.
+What if movement and behavior do not require initiation from a central control message? The Galilean–Newtonian revolution taught us that force is not needed to maintain motion, but only to change it. By analogy, we propose that the nervous system’s primary cognitive role is not to generate action, but to participate in its modulation by \emph{routing signals that alter ongoing dynamics}. Organisms without nervous systems already exhibit movement, and even isolated cardiac tissue continues to beat rhythmically on its own \citep{llinas2002vortex, landecker2007culturing}. The capacity for action is thus intrinsic to living cells. Unless redirected by internal or external affordances, action patterns persist—a \emph{principle of inertia for cognitive science}. 
 
 This counter-intuitive insight—that action precedes control rather than being controlled—forms the foundation of our SMN model. As we will elaborate in Section~\ref{sec:model}, this leads to a fundamentally different understanding of how cognition emerges from biological architecture.
 
+This paper argues for a model-driven approach that does not mistake correlation for causation. We contend that much of the biology relevant to cognition has been ignored precisely because it is not unique to humans. Our obsession with our own specialness has prevented us from seeing the general principles at work.
+
+Our argument depends on adopting a model-driven approach. Following Nersessian’s account of model-based reasoning \citep{Nersessian1999_ModelBasedReasoning}, we treat models not as mirrors of reality but as tools for thinking, simulating, and reorganizing concepts. What we present here is not a single model but a family of models—an architecture—that captures the structural and dynamic conditions under which cognition emerges. The architecture itself is neither true nor false, but semantically coherent in Stegmüller’s sense \citep{Stegmueller1976_StructureDynamics}. We contend that many established facts fall into place if we \emph{grant} this architecture, even though the model is not derived from them. In this respect, our work is guided by alternative assumptions rather than conventional derivation from data.
+
+%\input{spaceship}
+
+% Two major breakthroughs in science and technology helped us to understand so many things, while at the same time, they are also impeding cognitive science. The discovery of DNA, genetic code, genetic basis of variations leading to the modern synthetic theory of evolution, and the enormous and disruptive impact of information processing models in modern society have both illuminated and obscured our understanding of cognition.
+ 
 \subsection{Novel Aspects of the Proposal}
-While our Sensation-Modulating Network (SMN) framework shares important affinities with enactive, embodied, ecological, and extended theories of cognition, several key differences and novel contributions set it apart. 
-\begin{description}
-    \item[Architectural Specificity and Biological Detail] 
-    Segmentation, Polarity, Symmetry, Antagonism: We foreground a precise architectural plan—the agent as a segmented, polarized, bilaterally symmetrical, and antagonistically organized network. Many embodied or enactive theories invoke a generic ``body'' \cite{clark1997being, gallagher2005how}, but our model provides a concrete, biologically plausible template for how cognition emerges from structural features common across animal life.      Rather than treating embodiment as a metaphor, we show how the coordination of action zones forms the substrate for cognitive acts, grounding higher phenomena in actual bodily organization.
 
-    \item[Primacy of Halting and Modulation]
-    A central claim is that cognition does not merely initiate actions, but modulates and halts ongoing rhythms, treating the pause itself as a cognitive act. Traditional frameworks focus on action initiation or perception \cite{fodor_modularity_1983, chomsky1965aspects}, but our proposal recognizes halting as the locus of freedom, deliberation, and phenomenological experience.  This provides a new operational focus: how organisms carve out “tokens” and syntactic units from a continuous stream of action via halts.
+While our Sensation-Modulating Network (SMN) framework shares affinities with enactive, embodied, ecological, and extended theories of cognition, it advances several distinctive contributions. For clarity, we group these novel aspects into five clusters: architectural principles, dynamics of action, semiotics and syntax, formalization and methodology, and philosophical implications. 
 
-    \item[Nested Action Patterns] 
-    The division into Fixed Action Patterns (FAPs), Haltable Action Patterns (HAPs), and Transactional Action Patterns (TAPs) as dynamically layered and context-sensitive is more granular than most existing accounts. Especially unique is the idea that cognitive flexibility and symbolic capacity arise from the transition between these layers—from deeply ingrained rhythms to consciously modulated and socially shared actions.
+\begin{figure}[t]
+\begin{adjustwidth}{-2in}{0in}
+\centering
+\begin{tikzpicture}[
+  font=\small,
+  >=Latex,
+  node distance=10mm and 12mm,
+  % --- Styles ---
+  core/.style={rounded corners=6pt, draw=black, line width=0.7pt, fill=gray!10, inner sep=6pt, text width=36mm, align=center},
+  group/.style={rounded corners=6pt, draw=black, line width=0.6pt, fill=gray!4, inner sep=6pt, text width=36mm, align=left},
+  tag/.style   ={draw=black, fill=white, line width=0.5pt, inner sep=2pt, font=\footnotesize\bfseries, rectangle, rounded corners=3pt},
+  arrow/.style ={-{Latex[length=2mm]}, line width=0.7pt},
+  rel/.style   ={-{Latex[length=2.8mm]}, line width=0.6pt, dashed},
+  bullet/.style={circle, fill=black, minimum size=2pt, inner sep=0pt},
+  title/.style ={font=\bfseries},
+]
 
-    \item[Tokenization and Syntax Grounded in Action Architecture]
-    Unlike classic cognitivist accounts, which see tokens as amodal symbols \cite{fodor1975language, pylyshyn1984computation}, our model demonstrates how tokens emerge from bounded, repeatable, haltable actions. Syntactic structure is not imposed from without, but exapted from the combinatorial possibilities inherent in the body's architecture. This is a bottom-up view of syntax, tracing linguistic generativity to motoric organization, rather than positing a dedicated language module.
-    \item[Grounding of Semiotics and Symbols in Action Patterns]
-    The solution to the “symbol grounding problem” is embodied and dynamic: unsaturated action patterns (USHAPs) become the physical substrate of concepts and internal representations. Transactional Action Patterns (TAPs), as socially shared, trace-making behaviors, show how meaning and symbols are enacted and externalized via body-environment couplings, not arbitrarily assigned. This provides a functional bridge from action to meaning, linking Peircean semiotics with Hebbian \cite{hebb1949organisation} and sensorimotor mechanisms.
+% --- Core node ---
+\node[core] (smn) {\textbf{SMN Architecture}\\[1mm]
+\footnotesize Sensation-Modulating Network\\[-0.2mm]
+\footnotesize (biological body plan + routing/modulation)};
 
-    \item[Plasticity and Redundancy in Action Schemas]
-    The model’s emphasis on redundancy and interchangeability among motor zones (e.g., hands, feet, facial gestures) allows for an elegant account of neural and cognitive plasticity—concepts and functions are emancipated from their original bodily location, facilitating creative compensation, learning, and adaptation.
+% --- Five groups placed around in a star layout ---
+\node[group, above=20mm of smn] (A) {%
+\textbf{A. Structure}\\[1mm]
+\scriptsize Polarity, topology, segmentation,\\
+\scriptsize bilateral symmetry, antagonism.\\
+\scriptsize Plasticity \& redundancy across zones.\\
+\scriptsize Environmental forces as constitutive.};
 
-    \item[Demonstrating Formalization using Multiple Mathematical Analogies] 
-    The proposal integrates topology, graph theory, category theory, group theory, Petri nets, control theory, information theory, and signal processing to bridge dynamic biological architectures with rigorous formal systems. This multi-level analogical approach allows new kinds of computational modeling and theoretical precision.
+\node[group, right=30mm of smn, yshift=8mm] (B) {%
+\textbf{B. Dynamics}\\[1mm]
+\scriptsize Primacy of halting \& modulation.\\
+\scriptsize Layered action patterns:\\
+\scriptsize FAP $\rightarrow$ HAP $\rightarrow$ NAP $\rightarrow$ TAP.\\
+\scriptsize Memory as degeneracy of action patterns\\
+\scriptsize Streams and snapshots of tokens as phenomenology};
 
-    \item[Epistemic Role of Environmental Forces]
-    Unlike neuro-centric or ecological models that treat the environment as a passive data source, we highlight fields like gravity and aquatic habitat as constitutive partners in cognition—agents actively calibrate “data structures” using predictable physical feedback, reducing internal computational load.
+\node[group, left=30mm of smn, yshift=8mm] (C) {%
+\textbf{C. Syntax}\\[1mm]
+\scriptsize Tokens from haltable actions.\\
+\scriptsize Syntax exapted from body combinatorics.\\
+\scriptsize USHAPs, TAPs, trace-making.\\
+\scriptsize Representation as re-enactment.};
 
-    \item[Unified, Fully Testable Framework]
-    We move from philosophical stance to empirical program, offering distinct experimental predictions: e.g., disrupting proprioception should impair spatial reasoning \cite{proprioception_spatial, proprioception_reasoning}, mastery of action syntax should precede linguistic syntax, etc..
+\node[group, below left=18mm and 18mm of smn] (D) {%
+\textbf{D. Formal Sketch}\\[1mm]
+\scriptsize Topology, graphs, categories, groups.\\
+\scriptsize Petri nets, control \& information theory.\\
+\scriptsize Testable predictions.};
 
-    \item[Reconciliation of Representation with Enactivism]
-    Rather than rejecting representation or mental simulation, our model redefines representation as re-enactment of unsaturated action patterns (USHAPs), thus bridging the gap between radical enactivism and cognitivist abstraction in a uniquely grounded way.
+\node[group, below right=18mm and 18mm of smn] (E) {%
+\textbf{E. Philosophy}\\[1mm]
+\scriptsize Recasts mind/body, objective/subjective,\\
+\scriptsize universals/particulars, form/matter.};\\
 
-    \item[Questioning Traditional Dichotomies in Philosophy]
-    Objectivity and Subjectivity; Empirical and Rational; Universals and Particulars; Form and Matter; Mind and Body.
+% --- Arrows from core to groups ---
+\draw[arrow] (smn.north) -- (A.south);
+\draw[arrow] (smn.east) -- (B.west);
+\draw[arrow] (smn.west) -- (C.east);
+\draw[arrow] (smn.south west) -- (D.north east);
+\draw[arrow] (smn.south east) -- (E.north west);
 
-\end{description}
+%\draw[rel] (A.south) -- ($(A.south)!0.55!(smn.north)$);
+%\draw[rel] (B.west) -- ($(B.west)!0.55!(smn.east)$);
+%\draw[rel] (C.east) -- ($(C.east)!0.55!(smn.west)$);
+%\draw[rel] (D.north east) -- ($(D.north east)!0.5!(smn.south west)$);
+%\draw[rel] (E.north west) -- ($(E.north west)!0.5!(smn.south east)$);
+
+% --- Compact legend ---
+%\node[anchor=north west, align=left] at ($(smn.south west)+(-28mm,-22mm)$) {%
+%\begin{minipage}{0.48\linewidth}
+%\footnotesize
+%\textbf{Legend}\\[-0.25em]
+%\begin{tabular}{@{}ll@{}}
+%\raisebox{0.6ex}{\tikz\draw[arrow] (0,0)--(0.8,0);} & feedforward specification from SMN \\
+%\raisebox{0.6ex}{\tikz\draw[rel] (0,0)--(0.8,0);}   & reciprocal constraint/feedback \\
+%\end{tabular}
+%\end{minipage}
+%};
 
 
-Among the implications of this proposal include: a re-characterization of being human. We shall demonstrate that the ``mechanics'' of cogntition are not \textit{peculiar} to human beings, while certain aspects of them are \textit{predominant}. The model also provides an explanation of why machine learning is so \textit{expensive}, data and memory driven, while humans can perform those operations at room temperature. Unlike Turing's model of computation that depends on reading and writing symbols on almost \textit{infinite} memory, we provide an alternate approach to computation that does not store tokens, but generates them, in the body, and interprets them on the fly using the schema in the form of action patterns. The schema are not fixed, when formed, they get revised or destroyed, based on how well they support \textit{predictive processing}. Thus these are not \textit{rational} schema, but \textit{stochastic} in nature. Though human reason \textit{appears} to be akin to bounded rationality, it is so only when we play the rule based game of formal semantics. It is not the body that is bound to rationality but the transactional cutlure of academics. Recent success stories of modern machine learning support this insight that rule bound rationality emerges after several trials and errors, while the stochastic behavior is the foundation. 
+\end{tikzpicture}
+\caption{Schematic overview: the SMN architecture (center) and five core proposal clusters (A–E). }
+\label{fig:smn_overview}
+\end{adjustwidth}
+\end{figure}
 
-This paper unfolds in five parts. First, we will elaborate on the proposed SMN model (Section~\ref{sec:model}), detailing its architectural principles and dynamic properties, including the mathematical formalizations that capture its structure. Second, we will demonstrate how this model can explain a wide range of cognitive phenomena (Section~\ref{sec:phenomena}), from subjective experience to the emergence of abstract concepts, using concrete examples that illustrate the progression from saturated to unsaturated action patterns. Third, we will situate our model within the broader theoretical landscape (Section~\ref{sec:comparison}), comparing its core tenets and explanatory power to other leading theories of cognition, with particular attention to how it reconciles the apparent opposition between cognitivism and 4E approaches. Fourth, we will reinterpret existing experimental evidence and propose novel, falsifiable predictions derived from our framework (Section~\ref{sec:empirical}). Finally, we will conclude by discussing the broader implications of this model, arguing that it offers a foundational departure from previous approaches and provides a path toward reconciling the long-standing divisions in the field.
 
-We begin, then, with a detailed examination of the SMN architecture, showing how the biological principles of segmentation, polarity, symmetry, and antagonism create the conditions for cognitive emergence.
+
+\paragraph{A. Architectural Principles}
+At the foundation, we foreground a biologically specific plan: the cognitive agent as a polarized, tubular, segmented, bilaterally symmetrical, and antagonistically organized network. Unlike many embodied or enactive theories that invoke a generic ``body'' \citep{clark1997being, gallagher2005how}, our model specifies the concrete architectural features from which cognition emerges. Within this architecture:
+\begin{itemize}
+    \item Polarity, topology, segmentation, bilateral symmetry, and antagonism serve as structural invariants grounding cognitive function.
+    \item Plasticity and degeneracy across motor zones (hands, feet, facial gestures) account for neural and cognitive flexibility, enabling compensation, creativity, and adaptation.
+    \item Environmental forces such as gravity or aquatic dynamics are treated as constitutive partners in cognition, reducing internal computational load through predictable feedback.
+\end{itemize}
+
+\paragraph{B. Dynamics of Action}
+Cognition, in our account, does not originate in initiation but in modulation. The nervous system routes signals to alter ongoing dynamics:
+\begin{itemize}
+    \item \emph{Primacy of halting and modulation}: pauses and interruptions are cognitive acts, loci of freedom and deliberation, not mere absences of motion.
+    \item \emph{Nested action patterns}: Fixed (FAPs), Haltable (HAPs), Negotiable (NAPs), and Transactional (TAPs) Action Patterns form a layered continuum, with cognitive flexibility arising from transitions across these strata.
+    \item \emph{Memory}: body holds degenerate action schema as memory that have both ontogenetic and phylogenetic origins.
+    \item \emph{Phenomenology}: the streams and snapshots of tokens filled in the place nodes of the Petri Net provide subjective experience
+\end{itemize}
+
+\paragraph{C. Semiotics and Syntax}
+From these dynamics emerge semiotic and linguistic capacities, grounded in bodily action:
+\begin{itemize}
+    \item Tokens arise not as amodal symbols \citep{fodor1975language, pylyshyn1984computation}, but as repeatable, haltable actions generated stochastically in context.
+    \item Body holds dynamic and degenerate action patterns (FAPs, HAPs, NAPs and TAPs) as memory
+    \item Syntactic structure is exapted from the combinatorial organization of the body, yielding a bottom-up account of generativity.
+    \item Unsaturated action patterns (USHAPs) provide substrates for concepts and representations; TAPs externalize meaning in shared traces, linking Peircean semiotics with Hebbian mechanisms \citep{hebb1949organisation}.
+    \item Representation is redefined as re-enactment, reconciling enactivist critiques with cognitivist appeals to mental simulation.
+\end{itemize}
+
+\paragraph{D. Formalization and Methodology}
+The framework is designed for precision and testability:
+\begin{itemize}
+    \item We integrate topology, graph theory, category theory, group theory, Petri nets, control theory, information theory, and signal processing to formalize biological architectures.
+    \item The result is a unified, empirically testable framework capable of generating novel predictions, e.g., that disrupting proprioception impairs spatial reasoning \citep{proprioception_spatial, proprioception_reasoning}, or that mastery of action syntax precedes linguistic syntax.
+\end{itemize}
+
+\paragraph{E. Philosophical Implications}
+Finally, the SMN model challenges several entrenched dichotomies in philosophy and cognitive science. By grounding cognition in a layered biological architecture, it reopens the terms of debate around objectivity and subjectivity, empirical and rational knowledge, universals and particulars, form and matter, and the relation of mind to body. We also question cognitivists aversion to actions, and radical enactivists aversion to representations. 
+
+\paragraph{The Three Problems for Cognitive Science}
+We propose that the core challenge for cognitive science is to answer a set of interrelated questions: (1) What structures and dynamics are necessary for phenomenological experience---the so-called ``hard problem'' \cite{chalmers1995facing}---to arise? (2) How does a cognitive agent construct a stable, geometric picture of its internal and external worlds? (3) How can this generated picture be shared meaningfully with other agents?  
+
+Among the broader implications of this proposal is a re-characterization of what it means to be human. The mechanics of cognition, we argue, are not peculiar to humans, though certain aspects are predominant in our species. Our model also explains why machine learning is so computationally expensive—data- and memory-driven—while humans can operate effectively “at room temperature.” Unlike Turing’s model of computation, which depends on storing and manipulating tokens on an effectively infinite tape, our framework treats tokens as generated dynamically in the body and interpreted on the fly. These tokens are transient: once their immediate role is fulfilled, they are destroyed, leaving only parsimonious stochastic schemas of action patterns. 
+
+Such schemas are not fixed or rational in the classical sense; they are continuously revised or discarded depending on how well they support predictive processing. Human reasoning appears rational only when enacted within rule-based games of formal semantics. What underlies this apparent rationality, however, is stochastic bodily processing that grounds memory and phenomenological experience. Rationality, in this view, is not intrinsic to the body but emerges in the transactional culture of symbolic practices, such as science and academia. Recent advances in machine learning corroborate this insight: rule-based rationality surfaces only after extensive trial and error, while stochastic behavior provides the true foundation.
+
+This paper unfolds in five parts. Section~\ref{sec:model} develops the SMN architecture, detailing its biological principles and dynamic properties, along with sketch formalizations. Section~\ref{sec:phenomena} shows how the model explains a range of cognitive phenomena, from subjective experience to abstract concepts, by tracing the progression from saturated to unsaturated but grounded action patterns. Section~\ref{sec:comparison} situates the model among major theoretical frameworks, showing how it bridges the divide between cognitivist and 4E approaches. Section~\ref{sec:empirical} reinterprets existing experimental findings and derives novel, falsifiable predictions. Finally, the conclusion reflects on broader implications, arguing that this framework provides a biologically grounded path toward reconciling long-standing divisions in cognitive science.
+
+We begin, then, with a detailed examination of the SMN architecture, showing how the biological principles create the conditions for cognitive emergence.
+
+
+
+
+
+
