@@ -1,3 +1,4 @@
+\section*{Appendix: Technical Terms}\label{appendix}
 
 \paragraph{Primer: what is a ``low–Reynolds-number'' aquatic world?}\label{reynolds-number}
 The Reynolds number is a dimensionless ratio that compares inertial to viscous forces in a fluid:
@@ -19,3 +20,12 @@ A CPG is a neural circuit that can produce rhythmic, patterned motor output \emp
 \textbf{Gating, stoppability, and HAPs.} Although CPGs can run autonomously, in vivo they are \emph{gated} by descending commands and sensory feedback (phase-resetting, reflex gating) so that rhythmic programs can be \emph{initiated, paused, resumed, or terminated} on short timescales. This “stoppability” links CPGs to our notion of \emph{haltable action patterns} (HAPs): robust generators whose continuation is contingent on context. Exemplars include spinal locomotor CPGs \citep{Kiehn2016NRN}, the brainstem respiratory generator (preB\"otzinger complex) and its couplings \citep{DelNegro2018BreathingMatters}, and orofacial CPGs for chew–lick–swallow that coordinate with breathing via switch-like gating \citep{Moore2014OrofacialCPG}. 
 
 \textbf{From biology to engineering.} CPG principles have informed robotics controllers that capture animal-like robustness and smooth transitions between gaits; analytical models such as the Matsuoka oscillator formalize how reciprocal inhibition plus adaptation yields stable rhythmic output under tonic drive \citep{Ijspeert2008NN,Matsuoka1985BiolCybern}.
+
+\paragraph{Counter Variation}\label{counter-variation}
+Counter-variation (bilateral sensing): when two laterally placed sensors change in opposite directions as a stimulus shifts across the midline, enabling a left–right difference signal for steering (classic “tropotaxis” by simultaneous bilateral comparison) \cite{Britannica_Tropotaxis}. 
+
+\paragraph{Vargence Control}\label{vargence}
+The reflex and voluntary control of disconjugate eye rotations that align the two visual axes on a target at a given depth (driven by disparity and other depth cues) \citep{Wismeijer2007VergenceDepthCues,HowardRogers2012PerceivingInDepth_Vol1}. 
+
+\paragraph{Azimuthal Localization}\label{azimuth}
+Estimating a sound’s horizontal (azimuth) angle using binaural cues—chiefly interaural time differences (low-freq) and level differences (high-freq).  Binaural interaural timing (ITD): the difference in arrival time of a sound at the two ears, a primary cue for low-frequency azimuth judgments in mammals  \citep{Grothe2010SoundLocalizationReview,Hancock2004ITD_IC_Model}. 

@@ -31,20 +31,20 @@ Two-sided architectures provide:
 \end{enumerate}
 \marginpar{Finite differences without memory buffers.}
 
-\paragraph{Thermodynamic economy.}
-Because bilateral comparison supplies gradients \emph{now}, the SMN avoids costly internal writes and resets associated with constructing explicit spatial maps.
-Under Landauer's principle, fewer policy overwrites mean less unavoidable heat; stereo sampling trades memory for \emph{simultaneity} and \emph{structure} \cite{Landauer1961Irreversibility,Bennett2003LandauerNotes,StillEtAl2012ThermoPrediction}.
+%\paragraph{Thermodynamic economy.}
+%Because bilateral comparison supplies gradients \emph{now}, the SMN avoids costly internal writes and resets associated with constructing explicit spatial maps.
+%Under Landauer's principle, fewer policy overwrites mean less unavoidable heat; stereo sampling trades memory for \emph{simultaneity} and \emph{structure} \cite{Landauer1961Irreversibility,Bennett2003LandauerNotes,StillEtAl2012ThermoPrediction}.
 
-\paragraph{Formalization sketch.}
-Let $s_L(t)$ and $s_R(t)$ denote left/right sensor streams.
-A minimal steering controller uses
-\begin{align}
-e(t) &= s_L(t) - s_R(t), \qquad m(t) = \tfrac{1}{2}\big(s_L(t)+s_R(t)\big), \\
-u_{\text{steer}}(t) &= k_e\, e(t) + k_m\, \dot{m}(t),
-\end{align}
-with $k_e,k_m$ tuned to medium-specific dynamics.
-Stereo control thus implements an \OAP{} by sequencing lateral differences through habitat-shaped transfer functions (gravity for leveling; fluid for turning), with halts encoded as $u_{\text{steer}} \to 0$.
-\todo{Figure: paired sensors/effectors with (i) disparity/ITD geometry, (ii) contra-lateral phase control, (iii) gravity vector for leveling.}
+%\paragraph{Formalization sketch.}
+%Let $s_L(t)$ and $s_R(t)$ denote left/right sensor streams.
+%A minimal steering controller uses
+%\begin{align}
+%e(t) &= s_L(t) - s_R(t), \qquad m(t) = \tfrac{1}{2}\big(s_L(t)+s_R(t)\big), \\
+%u_{\text{steer}}(t) &= k_e\, e(t) + k_m\, \dot{m}(t),
+%\end{align}
+%with $k_e,k_m$ tuned to medium-specific dynamics.
+%Stereo control thus implements an \NAP{} by sequencing lateral differences through habitat-shaped transfer functions (gravity for leveling; fluid for turning), with halts encoded as $u_{\text{steer}} \to 0$.
+%\todo{Figure: paired sensors/effectors with (i) disparity/ITD geometry, (ii) contra-lateral phase control, (iii) gravity vector for leveling.}
 
 \noindent\emph{Energy note.} Any logically irreversible update incurs
 $\dot Q \;\ge\; k_B T \ln 2 \cdot \dot N_{\text{erase}}$;

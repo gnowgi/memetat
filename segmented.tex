@@ -1,53 +1,29 @@
+\subsection{Segmentation \& Bilateral Symmetry: Co-evolved Architecture for Comparison, Control, and Coordination}
+\label{subsec:segm_bilateral}
 
-\subsection{Segmented Architecture: Modular Controllers and Coordinated Rhythms}
-\label{subsec:segmented}
+\marginpar{Co-evolution: segments $\leftrightarrow$ nerve cord; segments $\leftrightarrow$ bilaterality.}
+Metameric \emph{segmentation} and \emph{bilateral symmetry} are not merely adjacent chapters in animal evo–devo; they are tightly co-evolved design moves of Bilateria.\footnote{On definitions and historical usage of “segment,” see \citep{HannibalPatel2013WhatIsASegment}. On arthropod segmentation mechanisms and their evolution, see \citep{ChipmanArias2019ArthropodSegmentation}.} 
+Bilateral body layouts provide two laterally arranged sensorimotor arrays that enable \emph{counter-variation} and on-line \emph{comparison} (differences/ratios) across left–right channels—crucial for localization, error signals, and stabilization. Segmentation then multiplies these comparators along the anterior–posterior (A–P) axis into a chain of quasi-repeated modules, yielding a powerful \emph{distributed} controller: many small, locally coupled comparators that can synchronize or decouple as task demands shift.
 
-\marginpar{Segmentation = reusable control modules.}
-Segmentation is a pervasive evo--devo strategy that decomposes the body into \emph{repeating units} capable of semi-autonomous control. 
-For the SMN, segmentation furnishes a library of \emph{modular controllers}---each segment hosting local pattern generators and antagonistic actuators---that can be composed into flexible whole-body behaviors.
+\paragraph{Decentralized from the start: “CNS” as DNS.}
+The textbook label \emph{central} nervous system is historically misleading for early bilaterians. What evolves with metamerism is an \emph{elongate nerve cord} with iterated ganglia and longitudinal tracts—an inherently \emph{decentralized} architecture whose local circuits (reciprocal inhibition, segmental pattern generators) coordinate across segments.\marginpar{DNS $>$ CNS.\quad Iterated ganglia + longitudinal tracts.} 
+Comparative molecular mapping of annelid nerve cords reveals conserved mediolateral patterning domains aligned to segments—evidence for an ancient blueprint of \emph{nervous system centralization} that is nonetheless organized segment-wise and distributed along the axis \citep{DenesEtAl2007CellAnnelidCord,Telford2007SingleOriginCNS}. 
+Viewed functionally, control is \emph{centralized-by-coupling}, not centralized-by-locus: a DNS whose “center” is the traveling coordination pattern.
 
-\paragraph{Evo--devo foundations.}
-Across bilaterians, repeated structures arise through conserved patterning logics.
-In vertebrates, somitogenesis couples a tissue-scale \emph{wavefront} to local \emph{oscillators}, producing periodic somites \cite{CookeZeeman1976ClockWavefront,Pourquie2003SegmentationClock,Pourquie2011SegmentationClock}.
-In arthropods, diverse mechanisms (simultaneous vs sequential, long-germ vs short-germ) implement segment addition beyond the \emph{Drosophila-only} narrative \cite{PeelChipmanAkam2005ArthropodSegmentation}.
-These blueprints instantiate a general computational theme: \emph{clock + wavefront} turns continuous tissue into discrete, reusable units.
+\paragraph{Why segmentation fits bilaterality.}
+Given a bilateral scaffold, iterating A–P modules (segments) yields: (i) lateral comparators at each station (left–right sensing/actuation), (ii) axial phase-relations for traveling waves (locomotion, peristalsis), and (iii) redundancy for robustness and regeneration.\marginpar{Segments = repeated L–R comparators + axial waveguides.} 
+Evo–devo evidence suggests multiple routes to metamerism across lineages while drawing on a shared molecular toolkit; debates on homology vs convergence persist, but the functional synergies with bilateral layouts are clear \citep{HannibalPatel2013WhatIsASegment,ChipmanArias2019ArthropodSegmentation}.
 
-\paragraph{Control: CPGs, coordination, and interruptibility.}
-A central virtue of segmentation is the distribution of \emph{central pattern generators} (CPGs)---local rhythm factories for movement.
-Segmental CPGs can operate independently yet coordinate via inter-segment couplings to form coherent global gaits \cite{MarderBucher2001CPG,Grillner2006Lamprey,Ijspeert2008CPG}.
-Interruptibility comes ``for free'': local halts, phase resets, and re-routing are applied per segment, yielding \emph{HAPs} without destabilizing the global pattern (e.g., obstacle negotiation, gait transitions).
-\marginpar{Global behavior via local phase relationships.}
+\paragraph{Wnt/FGF/Notch–Hox: conserved A–P patterning and the segmentation clock.}
+Posterior growth zones use Wnt/FGF signaling and a Notch-linked \emph{segmentation clock} to periodically specify somites/segments; phase relations between Wnt and Notch oscillations are causal for proper boundary formation \citep{AulehlaPourquie2010SignalingGradients,WahlEtAl2007FGFUpstream,SonnenEtAl2018PhaseShift}. 
+\emph{Hox} genes then regionalize the repeated units (neck, thorax, abdomen; cervical–thoracic–lumbar, etc.), turning repetition into \emph{differentiated repetition}—a stratagem that couples modularity with specialization.\marginpar{Clock $\rightarrow$ segments; Hox $\rightarrow$ regional identities.}
 
-\paragraph{Bioelectric coupling of segmental control.}
-Although classic accounts emphasize genetic and synaptic mechanisms, bioelectric networks provide complementary, fast \emph{tissue-level} couplings: gap-junction connectivity and resting-potential landscapes can synchronize or bias segmental timing, modulate growth, and stabilize multi-stable states \cite{Levin2014MolecularBioelectricity}.
-In the SMN, these voltage dynamics are an additional layer knitting segmental controllers into a coherent organism.
+\paragraph{Metamerism $\leftrightarrow$ nerve cord co-evolution.}
+Segmentally patterned ganglia/neuromeres align with the metameric body plan in many taxa; molecular domain maps in annelids indicate that a mediolateral nervous-system architecture likely predates major bilaterian splits, supporting the view that nerve-cord organization and segmental patterning evolved in step rather than in isolation \citep{DenesEtAl2007CellAnnelidCord}.
 
-\paragraph{Habitat coupling: gravity and fluid.}
-Segment chains translate habitat physics into control constraints.
-In gravity, stacked segments distribute load, stabilize posture, and enable local corrective torques; in fluids, serial bending waves exploit boundary-layer and wake interactions for efficient thrust \cite{Alexander2003PrinciplesLocomotion}.
-Thus, segmentation not only reduces computational complexity; it directly \emph{matches} the structure of the medium.
+\paragraph{Bilateral axes and the chordate–protostome inversion.}
+Cross-phyla comparisons of dorsoventral (D–V) patterning propose an inversion of the D–V axis between protostomes (ventral cords) and chordates (dorsal cord), highlighting conserved axial logic beneath surface differences \citep{ArendtNueblerJung1994NatureInversion,Gerhart2000PNASInversion}. 
+Either way, what matters for control is the bilateral duplication of sensors/effectors organized by conserved A–P/D–V signals—fertile ground for distributed comparators and DNS-style coordination.
 
-\paragraph{Thermodynamic economy.}
-Modularity lowers the need for costly global policy rewrites: most adjustments are local phase tweaks and gate flips.
-Under Landauer's principle, fewer global resets mean less unavoidable dissipation; segmentation favors \emph{action-pattern reuse} over data storage \cite{Landauer1961Irreversibility,Bennett2003LandauerNotes,StillEtAl2012ThermoPrediction}.
-\marginpar{Economy by local updates, not global rewrites.}
-
-\paragraph{Formalization sketch.}
-Let $x_i(t)$ be the state of the $i$th segmental controller (e.g., a phase oscillator).
-Nearest-neighbor coupling $K_{ij}$ yields traveling waves or standing patterns depending on phase-lag targets.
-In the simplest case, a lattice of phase oscillators (Kuramoto-type) produces smooth waves; \emph{interrupts} are transient detunings or phase resets at select nodes.
-\begin{align}
-\dot{\theta}_i &= \omega_i + \sum_{j \in \mathcal{N}(i)} K_{ij} \sin(\theta_j - \theta_i - \phi_{ij}) + u_i(t),
-\end{align}
-where $u_i(t)$ encodes halts (HAPs) and negotiable reconfigurations (NAPs) via temporary changes to $\omega_i$ or $K_{ij}$.
-\marginpar{Kuramoto lattice as a \emph{control surface}.}
-\todo{Figure: (i) segmented chain with CPGs, (ii) phase-lag targets for swimming/walking, (iii) local phase reset producing a step or turn, (iv) habitat arrows (gravity/fluid) shaping feasible lags.}
-
-\paragraph{SMN vs Habitat (capsule).}
-\textbf{SMN:} segmental CPGs coordinate via local phase rules; interrupts stay local and compose into \NAP{}s.\footnote{NAPs are often realized by oscillator assemblies (OAPs in earlier drafts), but their distinct feature is negotiability: they can be rephased, reweighted, and recombined rather than running as stereotyped oscillations.}
-\textbf{Habitat:} gravity partitions load across segments; fluids reward traveling-wave phase lags—medium structure constrains and simplifies coordination.
-
-\paragraph{Adaptation.}
-Segmental CPGs adapt phase/gain through local plasticity while surrounding tissues update bioelectric set-points, stabilizing desired phase-lag patterns for common gaits and enabling quick local interrupts without global rewrites.
-
-Segmentation discretizes control into re-usable modules, making \emph{locally composable} HAPs. SMN leverages segmental synergies to retime and recombine actions with low wiring cost \citep{BizziCheung2013}.
+\paragraph{Epistemological note.}
+In Piaget’s \emph{genetic epistemology}, organismal structure (e.g., repeated segments, bilateral comparators) and sensorimotor coordination co-construct the very conditions of knowing. \emph{Biology and Knowledge} likewise frames cognition as emerging from, and constrained by, organic regulation—precisely what a metameric–bilateral, distributed nervous system (DNS) provides for stabilizing invariants in a changing world \citep{Piaget1970GeneticEpistemology,Piaget1971BiologyAndKnowledge}. The morphological plans stabilized by natural selection are, at base, selections by the media that act on bodies—internal fluids, external flow fields, and gravity. Given that organisms cannot opt out of this immediate physical surround, the post-\emph{tubularity} layer (segmentation + bilaterality) equips them to counter these forces more effectively. The whole body—not just “sense organs” or a privileged neural locus—participates via the Sensation–Modulating Network (SMN), whose action patterns attune the organism to these constraints. Beyond biochemical self-maintenance through autopoiesis \citep{MaturanaVarela1980}, these patterned actions furnish the raw material for autonomy that becomes explicit at later organizational layers. Crucially, segmentation and bilateral symmetry enlarge the \emph{repertoire} of action-variation beyond what polarity and tubularity alone afford.

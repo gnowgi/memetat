@@ -1,0 +1,242 @@
+\subsection{Self–Modulatable Action Patterns (SMAP / SNAP)}
+\label{subsec:smap}
+
+\paragraph{Intuitive entry point.}
+Many actions loop back into the body rather than (or in addition to) pushing on the outside world. Touching tongue to palate, pursing the lips, clapping, paced breathing, or making silent laryngeal gestures are familiar cases. In such actions the agent can \emph{deliberately tune} what is felt from their own body and \emph{halt} it at will. We call these \textbf{Self–Modulatable Action Patterns} (SMAP, a.k.a.\ SNAP). 
+
+Two empirical themes motivate SMAPs. First, \textbf{axial} subsystems (laryngo–pharyngeal complex, diaphragm/intercostals, ocular micro–saccades) tend to be \emph{co-activated bilaterally} by conserved central pattern generators (CPGs): their contractions recruit homologous muscles on both sides and broadcast state globally \citep{FeldmanDelNegro2006RespiratoryRhythm,Kelso1995DynamicPatterns}. By contrast, \textbf{appendicular} zones (hands, digits, tongue tip as an “appendage” of the oral axis) \emph{decouple} more readily, enabling fine, unilateral or cross-lateral acts (scratching, pointing, asymmetric lip gestures). Second, some axial SMAPs are primarily \emph{interoceptive} (felt in the throat, chest, viscera) and can be executed with no public trace. These are natural substrates for \emph{private} rehearsal—what we call \textbf{PAPs}—often overlapping but not reducible to subvocalization \citep{AldersonDayFernyhough2015InnerSpeech,Guenther2016NeuralControlSpeech}.
+
+\paragraph{Emancipated coordination and combinatorics.}
+When SMAPs enlist \emph{emancipated coordinated action zones} (eCAZ; see \S\ref{emancipated}), formerly yoked zones become independently recruitable building blocks. This emancipation yields a \emph{combinatorial explosion} of SMAP variants through new pairings (self-contact), phasing (in/out of CPG rhythms), and parameterizations (force, timing, laterality). Informally: more independently steerable zones $\Rightarrow$ a larger SMAP “vocabulary” in the same body.
+
+\paragraph{From description to structure.}
+We model the Sensation–Modulating Network (SMN) as a typed, weighted, directed graph $G=(\mathcal{Z},\mathcal{E})$ with zones $z\in\mathcal{Z}$ (organs/segments), edges $e\in\mathcal{E}$ encoding mechanical, fluidic, bioelectric, chemical, or acoustic couplings, and time-varying gains. Partition zones as sensors $\mathcal{S}$, effectors $\mathcal{A}$, and modulators $\mathcal{M}\subseteq \mathcal{S}\cap\mathcal{A}$ (e.g., larynx, diaphragm, extraocular system). A \emph{haltable action pattern} (HAP) is a finite sequence $\pi=\langle a_t\rangle_{t=1}^{T}$ with $a_t\in\mathcal{A}\times\Theta$ that stops at $T<\infty$.
+
+\begin{definition}[SMAP (informal)]
+A \emph{SMAP} is a HAP that (i) deliberately drives endogenous sensorimotor loops within the SMN, (ii) is \emph{parameterizable} (small changes in motor parameters produce predictable changes in sensed signals), and (iii) is \emph{haltable} on demand \citep{PezzuloCisek2016AffordanceLandscape,TodorovJordan2002OFC}.
+\end{definition}
+
+\paragraph{Dual–signal, reflexive nature of SMAPs.}
+Self-contact SMAPs (e.g., tongue–palate, hand–hand) stimulate \emph{both} participating zones. Even purely axial SMAPs often co-activate bilateral homologues (left/right intercostals; paired vocal folds). Thus a single SMAP typically generates \emph{two} simultaneously originating sensory streams \emph{from within the same network}. We call this the \textbf{dual-signal} and \textbf{reflexive} (within-SMN) property—“reflexive” here means \emph{relating parts of the same SMN to each other}, not a spinal reflex arc.
+
+\begin{definition}[Self–contact relation and dual stream]
+Write $x \circledast y$ if zones $x,y\in\mathcal{Z}$ can be brought into controlled contact or synchronized co-contraction by the agent. A SMAP with $x \circledast y$ produces two endogenous sensory streams $(s_x,s_y)\in\mathcal{S}\times\mathcal{S}$ with non-zero, agent-controlled Jacobians $\partial s_x/\partial\theta\neq 0$ and $\partial s_y/\partial\theta\neq 0$.
+\end{definition}
+
+\noindent \emph{Remark.} In graph terms, a SMAP that engages $x \circledast y$ generates at least two simultaneously active subgraphs $G_x,G_y\subseteq G$, often coupled by short mechanical/acoustic paths and longer proprio/interoceptive paths. This built-in \emph{bipartite sensing} is the hallmark of SMAPs.
+
+\paragraph{Cognitive relevance: a demarcation criterion.}
+SMAPs suggest a simple, testable cue for subjective vs.\ objective sources of sensation.
+
+\begin{definition}[Dual–Signal Criterion (DSC)]
+A sensory episode satisfies the \emph{DSC} if its dominant, time-locked feedback arrives as two (or more) jointly parameterized endogenous streams from within the SMN. 
+\end{definition}
+
+\begin{lemma}[Internal vs external cue]
+If an action yields DSC-positive feedback, the source is \emph{internal} (within-SMN, SMAP-like). If DSC-negative, the source is \emph{external} (world-coupled) unless confounded by tool-mediated loops. 
+\end{lemma}
+
+\noindent \emph{Intuition.} When you act on a stone, the stone is not part of the SMN; its feedback typically arrives as a \emph{single} exteroceptive “chunk” (sound, vibration) shaped by the world’s physics. When you clap your hands or tap tongue–palate, two matched endogenous streams co-arise (left/right palm; tongue/palate mechanoreceptors) alongside any public trace (sound) \citep{BlakemoreWolpertFrith1998Tickle}. The DSC therefore offers a principled cue for the subjective–objective boundary at the level of online control.
+
+\paragraph{Phenomenology and PAPs.}
+Because axial SMAPs (respiratory/phonatory, pharyngeal, ocular) are bilaterally yoked, richly interoceptive, and easily executed below public detectability, they provide a substrate for \textbf{private action patterns} (PAPs). PAPs support silent rehearsal and “inner” manipulation of rhythmic templates, not limited to speech \citep{AldersonDayFernyhough2015InnerSpeech,Guenther2016NeuralControlSpeech,Seth2013InteroceptiveInference}. Predictive attenuation further explains their privacy: self-generated sensations are down-weighted by forward models \citep{MiallWolpert1996ForwardModels,BlakemoreWolpertFrith1998Tickle}.
+
+\paragraph{Formal treatment (compact).}
+Let $a_t=(z_t,\theta_t)$ be the act at time $t$ and let $y_t\in\mathbb{R}^m$ be the concatenated sensory vector. Define the \emph{modulation map} $\mathcal{F}: \Theta \to \mathbb{R}^m$ by $y_t=\mathcal{F}(\theta_t;z_t)$ holding background state fixed.
+
+\begin{definition}[SMAP (formal)]
+A HAP $\pi=\langle a_t\rangle_{t=1}^{T}$ is a \emph{SMAP} if for each $t$ there exists at least one endogenous sensor $s\in\mathcal{S}$ with $\|\partial \mathcal{F}_s/\partial\theta_t\|>0$, and $\pi$ is agent-haltable. It is a \emph{dual–signal SMAP} if there exist distinct $s_x,s_y\in\mathcal{S}$ with $x \circledast y$ such that both Jacobians are non-zero and time-locked.
+\end{definition}
+
+\begin{definition}[Axial vs appendicular SMAPs]
+An \emph{axial SMAP} predominantly recruits midline, bilaterally yoked structures (larynx, pharynx, diaphragm/intercostals, ocular); an \emph{appendicular SMAP} predominantly uses laterally decouplable effectors (hands, digits, tongue tip, lips). Emancipated zones (eCAZ) are appendicular or sub-axial units whose couplings permit independent recruitment (see \S\ref{emancipated}).
+\end{definition}
+
+\begin{proposition}[Combinatorial scaling with emancipation]
+If $E$ emancipated zones are pairwise contact-capable, the number of distinct dual–signal SMAP pairings grows as $\binom{E}{2}$; allowing directed order, phasing, and parameter bins multiplies this base by factors for phase ($\Phi$) and parameter grids ($\Pi$), yielding $O(\Phi \Pi E^2)$ behavioral types under mild regularity.
+\end{proposition}
+
+\paragraph{Worked micro-examples.}
+\emph{Tongue–palate taps} (dual–signal, often PAP): crisp, tunable oral mechanoreception; DSC-positive; optional acoustic trace. 
+\emph{Clap} (dual–signal with public trace): bilateral cutaneous/proprioceptive streams + sound.
+\emph{Silent laryngeal gesture} (axial PAP): interoceptive/proprioceptive; no public trace; DSC-positive internally.
+
+\paragraph{Take-home.}
+SMAPs formalize the family of haltable, parameterizable, endogenous loops through which the body \emph{modulates itself}. Axial SMAPs tend to be co-activated and interoceptive (fertile ground for private thinking), while emancipated appendicular zones unlock combinatorial richness. The \emph{dual–signal} hallmark provides a concrete, operational boundary between internal (subjective) and external (objective) sources of sensed consequence.
+
+
+
+
+\subsection{Self–Modulatable Action Patterns (SMAP)}
+\label{subsec:SMAP}
+
+Beyond halting action patterns (HAPs), many organismic actions \emph{modulate their own sensory streams} by routing energy through the body itself rather than (or in addition to) the external world. As we assume the body as a single inter-connected network, an action at one zone could be broadcasted to other zones in an SMN. Tongue–palate contacts, lip closures, swallowing,  thumb sucking, and a spectrum of axial acts (laryngeal gestures, pharyngeal constrictions, ocular micro–saccades, respiratory maneuvers) are paradigmatic. We call these \emph{Self–ModulatableAction Patterns}, abbreviated \textbf{SMAP}.  Non-axial appendage driven self SMAPs like self–scratching, pruning, scratching also play important role in our model. 
+
+\begin{description}
+  \item[What is a SMAP (self–modulatable network action pattern)?]
+  A \textbf{SMAP} is an action you do that \emph{changes what you sense from your own body} in a way \emph{you can deliberately vary and stop}. Instead of mainly changing the outside world, a SMAP loops your action back into your own sensors (touch, muscle/joint sense, interoception), \emph{on purpose}. Examples: lightly tapping tongue to palate while thinking; pursing lips; clapping; paced breathing; humming silently by moving your larynx without sound. See \citep{PezzuloCisek2016AffordanceLandscape,BlakemoreWolpertFrith1998Tickle,AldersonDayFernyhough2015InnerSpeech}.
+  
+  \item[What makes it \emph{self–modulatable}?]
+  You can \emph{tune} the loop in real time—harder/softer, faster/slower, left/right, deeper/shallower—so the resulting sensation (from your own body) predictably changes with your adjustments \citep{MiallWolpert1996ForwardModels,TodorovJordan2002OFC}.
+    
+  \item[Why does this matter for thinking?]
+  SMAPs let agents generate structured sensory content \emph{from the body inward}, with little or no public trace. This supports “\emph{private}” rehearsal channels (PAPs)—like silent mouth/tongue or laryngeal gestures during inner speech—but also extends beyond speech to other axial gestures (breathing, micro-saccades, pharyngeal narrowing) \citep{AldersonDayFernyhough2015InnerSpeech,Guenther2016NeuralControlSpeech,Seth2013InteroceptiveInference}.
+\end{description}
+
+\paragraph{What do we mean by \emph{axial}?}
+In comparative anatomy, the \textbf{axial} body comprises the midline scaffolding and its closely coupled musculature and organs: skull, vertebral column (or homologous notochordal axis), ribs, sternum, diaphragm/intercostals, the hyo–laryngo–pharyngeal complex, and the trunk wall. Axial structures establish the organism’s \emph{longitudinal frame} and \emph{midline symmetries}, providing posture, breathing mechanics, and core stabilization across taxa \citep{Standring2021Grays,Kardong2019Vertebrates}. Developmentally, axial elements trace to notochord and paraxial mesoderm (somites) and are patterned by conserved midline signals (e.g., Shh, Wnt, Hox) that lay out rostro–caudal and dorsal–ventral identities before limb/appendage buds emerge \citep{GilbertBarresi2016DB,Carroll2005EndlessForms,Wellik2007HoxAxial}.
+
+Functionally, axial systems are \emph{globally broadcast and bilaterally yoked}. Central pattern generators (CPGs) in the brainstem and spinal cord coordinate rhythmic, life-supporting acts—respiration, phonation, swallowing—whose muscle synergies span both sides of the body and are difficult to uncouple \citep{FeldmanDelNegro2006RespiratoryRhythm,DelNegro2018BreathingMatters}. By contrast, the \textbf{appendicular} system (limbs, fins, wings and their girdles) affords more independent, task-specific, laterally differentiated actions (grasping, pointing, scratching).
+
+For our purposes, \emph{axial derivatives} are actions whose primary actuation and sensing ride this midline infrastructure: diaphragmatic/intercostal breathing, laryngeal and pharyngeal constrictions, trunk wall tonus, ocular micro-saccadic oscillations anchored to the cranial axis. Because axial synergies are obligatorily coupled and richly interoceptive/proprioceptive, they form natural substrates for \emph{self-modulatable} loops with little or no external trace—precisely the AX–SNAP class that supports private rehearsal (PAP) and the felt continuity of “core” agency and affect \citep{Seth2013InteroceptiveInference,Craig2002HowDoYouFeel}.
+
+
+\paragraph{Informal idea.}
+A SMAP is an action pattern whose execution creates a controllable (parametrizable, haltable) loop from effectors to the agent's own sensors via the embodied Sensation–Modulating Network (SMN), optionally leaving no durable public trace. SMAPs thus realize a special case of \emph{endogenous} (body–internal) affordance exploitation \citep{Varela1991EmbodiedMind,PezzuloCisek2016AffordanceLandscape}.
+
+% ---------- Minimal notation ----------
+% You may move these to your preamble.
+\newcommand{\Zones}{\mathcal{Z}}
+\newcommand{\Sensors}{\mathcal{S}}
+\newcommand{\Effectors}{\mathcal{E}}
+\newcommand{\Modulators}{\mathcal{M}}
+\newcommand{\Channels}{\mathcal{C}}
+\newcommand{\Paths}{\mathcal{P}}
+\newcommand{\Act}{\mathsf{Act}}
+\newcommand{\Sens}{\mathsf{Sens}}
+\newcommand{\modrel}{\leadsto}     % modulation relation
+\newcommand{\contact}{\mathrel{\circledast}} % self-contact relation
+\newcommand{\bilat}{\mathrel{\approx}}       % bilateral/axial coupling
+\newcommand{\trace}{\mathsf{Trace}}
+\newcommand{\SMI}{\mathsf{SMI}}   % Self-Modulability Index
+
+\paragraph{Setup.}
+Model the SMN as a typed, weighted, directed hypergraph
+$G = (\Zones,\Channels,\Paths)$ with zones $\Zones$
+(particulate organs/segments), typed couplings $\Channels \in \{\text{mechanical},\text{fluid},\text{bioelectric},\text{acoustic},\text{chemical}\}$, and signal paths $\Paths \subseteq \Zones^{+}$.
+Partition $\Zones$ into sensors $\Sensors$, effectors $\Effectors$, and modulators $\Modulators$ (with $\Modulators \subseteq \Sensors \cap \Effectors$ for classical “modulator” organs such as extraocular, laryngeal, and respiratory systems \citep{Kelso1995DynamicPatterns,FeldmanDelNegro2006RespiratoryRhythm,Guenther2016NeuralControlSpeech}).
+
+\begin{definition}[Action pattern]
+An \emph{action pattern} is a finite, time–indexed sequence
+$\pi = \langle a_1,\dots,a_T\rangle$ with $a_t \in \Act \subseteq \Effectors \times \mathbb{R}^k$ (motor command plus parameters), such that $\pi$ is \emph{haltable} if $\exists T < \infty$ after which no further actuation occurs (\emph{HAP}).
+\end{definition}
+
+\begin{definition}[Modulation relation]
+For zones $x,y \in \Zones$, write $x \modrel y$ at time $t$ iff there exists a path $p \in \Paths$ carrying energy/information from an act at $x$ to a sensory transduction at $y$ with strictly positive, controllable gain (agent–settable parameter) \citep{TodorovJordan2002OFC,MiallWolpert1996ForwardModels}.
+\end{definition}
+
+\begin{definition}[SMAP]
+An action pattern $\pi$ is a \emph{SMAP} iff for every $t$ there exists $s\in \Sensors$ such that
+$a_t.\text{zone} \modrel s$ and the mapping from $a_t$'s parameters to the sensed signal at $s$ has nonzero agent–controlled Jacobian. Formally,
+\[
+\forall t\,\exists s\in \Sensors:\; a_t.z \modrel s \;\wedge\;
+\left\|\frac{\partial \Sens(s)}{\partial\, a_t.\theta}\right\|>0.
+\]
+\end{definition}
+
+\begin{definition}[Self–contact and axial coupling]
+Define a symmetric \emph{self–contact} relation $x \contact y$ when an effector at $x$ can establish direct mechanical contact (tongue–palate, lip–lip, hand–skin). Define an \emph{axial/bilateral coupling} relation $x \bilat y$ when homologous axial structures are obligatorily co–activated (e.g.\ intercostals, diaphragm, larynx), typically via central pattern generators (CPGs) \citep{FeldmanDelNegro2006RespiratoryRhythm,DelNegro2018BreathingMatters,Sherrington1906Integrative}.
+\end{definition}
+
+\paragraph{Taxonomy.}
+We distinguish three ecologically and mechanistically distinct families:
+\begin{enumerate}
+  \item \textbf{SC–SMAP (Self–Contact)}: $x \contact y$ (tongue–palate, lips, hand–hand, self–scratch). High spatial specificity, rich cutaneous/proprioceptive feedback; easily haltable; often leaves ephemeral public traces (sound of a clap).
+  \item \textbf{AX–SMAP (Axial/Bilateral)}: $x \bilat y$ (laryngeal, pharyngeal, ocular micro–saccadic, respiratory gestures). Coarse bilateral synergy; rhythmically scaffolded by CPGs; globally broadcast to the body schema \citep{Kelso1995DynamicPatterns}.
+  \item \textbf{PAP (Private Action Patterns)}: SMAPs with $\trace(\pi)=\varnothing$ (no durable exteroceptive mark), dominated by interoceptive and proprioceptive channels (e.g.\ silent laryngeal contractions, tongue–palate micro–taps during mental rehearsal). PAP $\subset$ SMAP.%
+  \footnote{Self–generated sensory attenuation \citep{BlakemoreWolpertFrith1998Tickle} explains why PAPs feel “private” yet are neurally potent.}
+\end{enumerate}
+
+\paragraph{Broadcast property.}
+Let $A$ be the weighted adjacency on $\Zones$. For an act at zone $z$, the instantaneous endogenous broadcast is $B=\exp(\alpha A)\,\mathbf{e}_z$ (diffusion kernel). \emph{Architectural claim:} tubular $\rightarrow$ bilaterally segmented $\rightarrow$ appendaged morphologies increase both (i) controllability of $B$ and (ii) the dimensionality of SMAP manifolds accessible to the agent \citep{ThelenSmith1994Dynamics,Carroll2005EndlessForms}.
+
+\paragraph{Evo–devo rationale.}
+Early tubular body plans with axial CPGs supported AX–SMAPs (breathing/phonation precursors). Bilateral segmentation and appendages then enabled SC–SMAPs by bringing effectors into controlled contact with self surfaces (e.g.\ hand–mouth loop), vastly enriching self–modulation. Several lineages exhibit informative exceptions (e.g.\ independent ocular actuation in chameleons; forked tongues in squamates enhancing chemosensory self–sampling), indicating multiple phyletic paths to SMAP–rich control \citep{LandNilsson2012AnimalEyes,Schwenk1994ForkedTongues}.
+
+\paragraph{Phenomenology and thinking as SMAP.}
+SMAPs furnish an internal \emph{playback channel} for generating structured sensorimotor content without external affordances. PAPs, in particular, underwrite (but are not reducible to) inner speech and silent rehearsal \citep{AldersonDayFernyhough2015InnerSpeech,Guenther2016NeuralControlSpeech}. This reframes “thinking” as a class of modulatory trajectories on SMAP manifolds, coordinated by predictive/optimal feedback schemes \citep{TodorovJordan2002OFC,Friston2010FEP,Seth2013InteroceptiveInference} rather than disembodied symbol manipulation.
+
+\paragraph{Operational indices.}
+For an action $\pi$, define its \emph{Self–Modulability Index}
+\[
+\SMI(\pi)=\frac{\int \|\text{endogenous sensory power}\|\,dt}{\int \|\text{total sensory power}\|\,dt}\in[0,1].
+\]
+PAPs maximize SMI while minimizing $\trace(\pi)$. AX–SMAPs typically exhibit high respiratory/phonatory coupling; SC–SMAPs maximize cutaneous–proprioceptive loops.
+
+\paragraph{Distinctions from reflexes and TAP.}
+Reflexes may be internally routed but lack deliberate, graded parametric control (low Jacobian rank). Overt transactional action patterns (TAP) recruit public affordances and traces; PAPs are the SMAP subset with endogenous routing and null traces.
+
+\paragraph{Empirical predictions.}
+\begin{enumerate}
+  \item \emph{Covert SMAP signatures}: Elevated laryngeal/respiratory EMG and micro–saccade structure during “silent” problem solving; SMI correlates with task difficulty \citep{AldersonDayFernyhough2015InnerSpeech,Guenther2016NeuralControlSpeech}.
+  \item \emph{Perturbation}: Dampening self–contact channels (gloves, oral anesthesia) selectively impairs SMAP–dependent cognitive operations (e.g.\ verbal working memory spans that rely on tongue–palate taps).
+  \item \emph{Rhythmic entrainment}: Modulating axial CPGs (paced breathing) parametrically shapes PAP dynamics and subjective agency \citep{DelNegro2018BreathingMatters,Haggard2017AgencyReview}.
+  \item \emph{Comparative}: Species with greater independent ocular/tongue actuation show richer SMAP–like exploratory regimes \citep{LandNilsson2012AnimalEyes,Schwenk1994ForkedTongues}.
+\end{enumerate}
+
+\paragraph{Worked examples (abbreviated).}
+\begin{itemize}
+  \item \emph{Tongue--palate taps} (SC–SMAP, PAP possible): $x{=}$tongue, $y{=}$palate; $x\contact y$; $x\modrel s$ for $s\in$ trigeminal/proprioceptive sensors; $\trace(\pi)$ optional (clicks).
+  \item \emph{Clapping} (SC–SMAP, public trace): $x{=}$hand$_L$, $y{=}$hand$_R$; tactile+acoustic loops; $\trace(\pi)\neq\varnothing$.
+  \item \emph{Silent laryngeal gestures} (AX–SMAP, PAP): $x{=}$larynx; bilateral coupling $x\bilat x'$; strong interoceptive/proprioceptive loop; $\trace(\pi)=\varnothing$.
+  \item \emph{Breathing modulations} (AX–SMAP): diaphragm/intercostals with high bilateral coupling; SMAP via controllable airflow and baroreceptive loops \citep{FeldmanDelNegro2006RespiratoryRhythm,DelNegro2018BreathingMatters}.
+\end{itemize}
+
+%-------------------------------------------------------
+\subsubsection*{SMAPs in Plain Language}
+\label{subsec:SMAP_plain}
+
+\paragraph{Why this layer?}
+Readers coming from biology, philosophy, linguistics, HCI, or education may not need the full formalism to grasp the core idea. This descriptive layer distills the essentials and anchors them in everyday actions.
+
+
+\paragraph{Two big families you can feel.}
+\begin{description}
+  \item[SC–SMAP (Self–Contact).]
+  We make \emph{our body contact itself}. Tongue–palate, lip–lip, hand–hand, hand–skin. These have crisp touch and muscle/joint feedback; they are easy to dose and stop. Often make tiny public traces (a faint click or clap).
+  \item[AX–SMAP (Axial/Bilateral).]
+  We \emph{modulate midline, coupled systems}: breathing with diaphragm/intercostals; throat/larynx; ocular micro-saccades. These are often rhythmically scaffolded (central pattern generators) and widely broadcast through the body \citep{FeldmanDelNegro2006RespiratoryRhythm,DelNegro2018BreathingMatters,Kelso1995DynamicPatterns}.
+\end{description}
+
+\paragraph{Private Action Patterns (PAPs) = SMAPs with no public trace.}
+Some SMAPs leave essentially no outward mark (e.g., silent laryngeal adjustments, light tongue–palate taps). They feel “private” because the brain predicts and attenuates self-generated sensations \citep{BlakemoreWolpertFrith1998Tickle}. PAPs are a \emph{subset} of SMAPs.
+
+\paragraph{Quick demos (any reader can try).}
+\begin{enumerate}
+  \item \textbf{Tongue–palate meter:} While reading, make very gentle, regular taps of tongue to palate. Notice how you can change \emph{rate} and \emph{force}; notice subtle changes in “clarity” of inner speech. (SC–SMAP, PAP-capable.)
+  \item \textbf{Silent phonation:} Without audibly voicing, slightly tense/relax your larynx as if saying “mmm.” Feel throat and chest feedback shift with tiny parameter changes. (AX–SMAP, PAP.)
+  \item \textbf{Paced breathing:} Inhale 4 counts, exhale 6–8 counts. Track how this modulates attention/agency feelings \citep{DelNegro2018BreathingMatters,Haggard2017AgencyReview}. (AX–SMAP.)
+  \item \textbf{Self–clap contrast:} Clap softly vs.\ firmly; note tactile + acoustic feedback and ease of halting. (SC–SMAP, public trace present.)
+\end{enumerate}
+
+\paragraph{Common confusions, cleared up.}
+\begin{itemize}
+  \item \emph{“Isn’t this just self-stimulation?”} Not quite. SMAPs are defined by \emph{deliberate, parameterizable control} of internal sensorimotor loops (not merely any self-touch).
+  \item \emph{“Is thinking just subvocal speech?”} No. Subvocalization is one pathway; axial respiratory/laryngeal and ocular micro-loops also scaffold silent reasoning and imagery \citep{Guenther2016NeuralControlSpeech,LandNilsson2012AnimalEyes}.
+  \item \emph{“Do all species have the same SMAPs?”} No. E.g., chameleons can move eyes independently; some squamates use forked tongues for bilateral sampling—yielding different SMAP repertoires \citep{LandNilsson2012AnimalEyes,Schwenk1994ForkedTongues}.
+\end{itemize}
+
+\paragraph{At-a-glance comparison.}
+\begin{adjustwidth}{-2in}{0in}
+\begin{center}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{p{0.22\textwidth} p{0.30\textwidth} p{0.30\textwidth} p{0.30\textwidth}}
+\toprule
+\textbf{Feature} & \textbf{SMAP (SC/AX)} & \textbf{PAP (subset of SMAP)} & \textbf{Reflex / OAP / TAP}\\
+\midrule
+Volitional control & High; graded; haltable & High; graded; haltable & Reflex: low; TAP: high but world-directed\\
+Primary loop & Body$\rightarrow$Body (endogenous) & Endogenous; \emph{no public trace} & World-directed (exogenous)\\
+Typical channels & Tactile, proprio, interoceptive & Mainly intero/proprio & Exteroceptive (vision, sound), tool/world contact\\
+Trace in environment & Optional & None & Usually present (movement, marks, sound)\\
+Examples & Tongue–palate; paced breathing; clapping; silent laryngeal gestures & Silent larynx; micro-taps; tiny ocular adjustments & Startle reflex; writing on paper; turning a knob\\
+Key literature & \citep{PezzuloCisek2016AffordanceLandscape,Kelso1995DynamicPatterns} & \citep{AldersonDayFernyhough2015InnerSpeech,BlakemoreWolpertFrith1998Tickle} & \citep{Sherrington1906Integrative,Cisek2007AffordanceCompetition}\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{adjustwidth}
+
+\paragraph{Evo–devo intuition in one paragraph.}
+As animals evolved from tubular bodies to bilaterally segmented forms with appendages, the \emph{palette} of self-modulatable loops expanded. Axial pattern generators (breathing, larynx, ocular) provide early, shared \emph{rhythmic scaffolds}; later hand–mouth and hand–skin contact added richly tunable self-contact loops. Variations like independent eye control or forked tongues illustrate lineage-specific SMAP toolkits \citep{Carroll2005EndlessForms,LandNilsson2012AnimalEyes,Schwenk1994ForkedTongues}.
+
+\paragraph{One-line takeaway (for slides).}
+\emph{SMAPs are the agent’s built-in “practice studio”: controllable, stoppable body-loops that let you shape what you sense from yourself—and think with it.}

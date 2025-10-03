@@ -45,6 +45,11 @@ where $u_i(t)$ captures modulatory inputs from the SMN:
 \marginpar{Kuramoto lattice as a \emph{control surface}.}
 \todo{Figure: (i) segmented chain with CPGs, (ii) phase-lag targets for swimming/walking, (iii) local phase reset producing a step or turn, (iv) habitat arrows (gravity/fluid) shaping feasible lags.}
 
+\begin{figure}[ht] 
+\includegraphics[width=\textwidth]{graphics/FAP-HAP-NAP-TAP-2.pdf}
+\caption{A diagram that visually organizes the relationships between FAP, HAP, NAP, and TAP, showing how each category connects to oscillator-based control terms and behavioral examples. The flowchart starts from the oscillator-based controller, branches to FAP, HAP, and NAP, and then leads from NAP to TAP, illustrating the hierarchical structure and characteristic mechanisms for each pattern type. For example, walking corresponds to FAP, startle freeze to HAP, adaptive stride to NAP, and their traces accessible external to thhe agent become potential TAP. Each node is annotated with both the formal control expression and a real-world illustration, clarifying the progression from innate rhythms to socially communicable actions.}\label{schematic-fhnt-ap}
+\end{figure}
+
 \paragraph{SMN vs Habitat (capsule).}
 \textbf{SMN:} segmental CPGs coordinate via local phase rules; interrupts compose into \NAP{}s, which provide the substrate for adaptive negotiation.  
 \textbf{Habitat:} environmental structure (e.g., gravity, buoyancy, fluid drag) shapes feasible phase-lags, constraining and simplifying coordination.  
@@ -53,3 +58,5 @@ where $u_i(t)$ captures modulatory inputs from the SMN:
 Segmental CPGs adapt phase and gain through local plasticity while surrounding tissues update bioelectric set-points, stabilizing useful NAPs (e.g., common gaits) and enabling rapid local interrupts without global rewrites.  
 Segmentation thus discretizes control into re-usable modules: \emph{FAPs become haltable, HAPs become negotiable, and NAPs can be externalized as TAPs}.  
 The SMN leverages these synergies to retime and recombine actions with low wiring cost \citep{BizziCheung2013}.
+
+

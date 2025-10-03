@@ -28,8 +28,7 @@ This can be modeled as a Petri net \cite{peterson1977petri}, a bipartite graphic
 For example, a sense organ as a transducer can be represented as a transition of an analog physical perturbation from the environment (an input) into an action potential within the agent. This transduction is the basic source of input tokens to the agent, forming sensations.
 \begin{figure}[ht] 
 \includegraphics[width=\textwidth]{graphics/PN_Transduction.pdf}
-\caption{\textbf{Transduction:
-}The transducer is represented as a square node, which will fire when a condition of at least one token as input place value is satisfied, giving rise to the resulting place value.
+\caption{\textbf{Transduction:}The transducer is represented as a square node, which will fire when a condition of at least one token as input place value is satisfied, giving rise to the resulting place value.
 Places are represented as circles with or without tokens (the values).}
 \label{transduction}
 \end{figure}
@@ -244,3 +243,111 @@ Haltability corresponds to gating of token flow, ensuring that when one zone is 
 \end{figure}
 
 Tokens are proprioceptive/sensory messages; transitions fire when enabled by local tokens and CNS routing; dashed edges visualize haltability/alert delivery (readiness, not binary off). The shared CNS place implements broadcast/integration without central command.
+
+
+\paragraph{Antagonistic zones as distributed processors.}
+The haltability relation, first illustrated with left–right coordination, applies equally to all antagonistic pairs in the body. 
+Flexor–extensor pairs, for example, do not communicate through direct physical linkage but via neural mediation: proprioceptive and sensory receptors embedded in muscle fibers continuously encode state variables (e.g., length, tension, velocity) and transmit them through the central nervous system (CNS). 
+In this picture, the CNS is not a hierarchical controller but a \emph{traffic router}. 
+It gates the exchange between paired zones, delivers messages to other participating zones, and broadcasts state information across the body. 
+This broadcast allows the whole organism to maintain a coherent map of its geometrical configuration—an integrated sense of where each zone is relative to the others.
+
+The analogy with computer networks clarifies the architecture: each action zone functions as a distributed processing unit (DPU), capable of local computation and haltability; the CNS provides the communication backbone, like a motherboard or an internet switch, ensuring that local computations are exchanged, synchronized, and globally visible. 
+Thus the SMN is neither brain-centered nor muscle-centered but a distributed system of co-regulated action zones, whose closure at the level of the whole network generates the agent’s bodily identity. 
+In this way, antagonism and haltability extend beyond individual effectors to form the very principle of organizational closure that defines the cognitive agent.
+
+\begin{figure}[t]
+\begin{adjustwidth}{-2in}{0in}
+\centering
+\begin{tikzpicture}[
+  font=\small,
+  zone/.style={draw, rounded corners, inner sep=2pt, fill=black!2},
+  dpu/.style={circle, draw, inner sep=1.2pt, minimum size=4mm, fill=white},
+  cns/.style={draw, rounded corners=4pt, thick, fill=blue!6, inner sep=5pt},
+  msg/.style={-{Latex[length=2mm]}, thick},
+  halt/.style={-{Latex[length=2mm]}, dashed, gray!70, line width=0.8pt},
+  broadcast/.style={draw=blue!40, thick, rounded corners, dashed},
+  legend/.style={draw, rounded corners, inner sep=2pt, fill=black!2},
+  >=Latex
+]
+\usetikzlibrary{calc} 
+% --- CNS hub (router/broadcaster) ---
+\node[cns] (cns) {\textbf{CNS}: router \& broadcaster};
+
+% broadcast "aura"
+\begin{scope}[on background layer]
+  \node[broadcast, fit=(cns), inner sep=10pt] (aura1) {};
+  \node[broadcast, fit=(cns), inner sep=16pt] (aura2) {};
+\end{scope}
+
+% --- Antagonistic zones (flexor/extensor DPUs) ---
+% Z1: Shoulder
+\node[zone, left=35mm of cns, yshift=20mm] (z1) {Shoulder};
+\node[dpu, above left=2mm and 1mm of z1] (z1f) {\scriptsize F};
+\node[dpu, below right=2mm and 1mm of z1] (z1e) {\scriptsize E};
+
+% Z2: Elbow
+\node[zone, left=38mm of cns, yshift=-18mm] (z2) {Elbow};
+\node[dpu, above left=2mm and 1mm of z2] (z2f) {\scriptsize F};
+\node[dpu, below right=2mm and 1mm of z2] (z2e) {\scriptsize E};
+
+% Z3: Wrist
+\node[zone, below=22mm of cns, xshift=-14mm] (z3) {Wrist};
+\node[dpu, above left=2mm and 1mm of z3] (z3f) {\scriptsize F};
+\node[dpu, below right=2mm and 1mm of z3] (z3e) {\scriptsize E};
+
+% Z4: Jaw
+\node[zone, right=32mm of cns, yshift=14mm] (z4) {Jaw};
+\node[dpu, above left=2mm and 1mm of z4] (z4f) {\scriptsize F};
+\node[dpu, below right=2mm and 1mm of z4] (z4e) {\scriptsize E};
+
+% Z5: Ankle
+\node[zone, right=35mm of cns, yshift=-22mm] (z5) {Ankle};
+\node[dpu, above left=2mm and 1mm of z5] (z5f) {\scriptsize F};
+\node[dpu, below right=2mm and 1mm of z5] (z5e) {\scriptsize E};
+
+% --- Local antagonism (reciprocal coupling inside a zone) ---
+\draw[halt] (z1f) to[bend left=20] node[above] {\scriptsize haltability} (z1e);
+\draw[halt] (z1e) to[bend left=20] (z1f);
+
+\draw[halt] (z2f) to[bend left=20] (z2e);
+\draw[halt] (z2e) to[bend left=20] (z2f);
+
+\draw[halt] (z3f) to[bend left=20] (z3e);
+\draw[halt] (z3e) to[bend left=20] (z3f);
+
+\draw[halt] (z4f) to[bend left=20] (z4e);
+\draw[halt] (z4e) to[bend left=20] (z4f);
+
+\draw[halt] (z5f) to[bend left=20] (z5e);
+\draw[halt] (z5e) to[bend left=20] (z5f);
+
+% --- Routing via CNS: point-to-point messages (selected examples) ---
+\draw[msg] (z1e) -- ($(z1e)!0.45!(cns)$) -- (cns);
+\draw[msg] (cns) -- ($(cns)!0.55!(z3f)$) -- (z3f);
+
+\draw[msg] (z2f) -- ($(z2f)!0.5!(cns)$) -- (cns);
+\draw[msg] (cns) -- ($(cns)!0.6!(z4e)$) -- (z4e);
+
+\draw[msg] (z5e) -- ($(z5e)!0.5!(cns)$) -- (cns);
+\draw[msg] (cns) -- ($(cns)!0.6!(z1f)$) -- (z1f);
+
+% --- Cross-zone haltability/alert cues (dashed, via CNS) ---
+\draw[halt] (z4f) to[bend left=10] (cns);
+\draw[halt] (cns) to[bend left=8] node[below] {\scriptsize alert} (z2e);
+
+% --- Legend ---
+\node[legend, below=28mm of cns, align=left] (leg) {
+\begin{tabular}{@{}ll@{}}
+\raisebox{1pt}{\tikz{\node[dpu]{};}} & Flexor/Extensor DPU (local processor) \\
+\raisebox{-1pt}{\tikz{\draw[msg] (0,0) -- (0.7,0);}} & Routed message via CNS (point-to-point) \\
+\raisebox{-1pt}{\tikz{\draw[halt] (0,0) -- (0.7,0);}} & Haltability/alert relation (reciprocal, dashed) \\
+\raisebox{-1pt}{\tikz{\draw[broadcast] (0,0) rectangle (0.7,0.3);}} & CNS broadcast envelope (global state) \\
+\end{tabular}
+};
+
+\end{tikzpicture}
+\caption{SMN as a distributed network. Each antagonistic zone is a local DPU (flexor--extensor pair) with reciprocal haltability (dashed). The CNS acts as a router: mediating point-to-point exchange, enforcing gating protocols, and broadcasting integrated body state for global geometric awareness.}
+\label{fig:smn-router}
+\end{adjustwidth}
+\end{figure}
